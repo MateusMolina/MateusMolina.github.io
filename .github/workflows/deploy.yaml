@@ -27,12 +27,13 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: MateusMolina/mm-core
-          token: ${{ secrets.MM_CORE_PAT }} # Personal Access Token stored as a secret
+          token: ${{ secrets.MM_CORE_PAT }}
           path: mm-core
 
       - name: Replace content with mm-core public
         run: |
           rm -rf content/*
+          bash mm-core/scripts/generate-public.sh
           cp -R mm-core/public/* content/
 
       - uses: actions/setup-node@v3
