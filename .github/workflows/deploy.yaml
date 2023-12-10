@@ -26,6 +26,8 @@ jobs:
       - name: Checkout mm-core repository
         uses: actions/checkout@v3
         with:
+          lfs: 'true'
+          submodules: 'recursive'
           repository: MateusMolina/mm-core
           token: ${{ secrets.MM_CORE_PAT }}
           path: mm-core
