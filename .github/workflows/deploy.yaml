@@ -26,16 +26,20 @@ jobs:
       - name: Checkout mm-core repository
         uses: actions/checkout@v3
         with:
-          lfs: 'true'
-          submodules: 'recursive'
           repository: MateusMolina/mm-core
           token: ${{ secrets.MM_CORE_PAT }}
           path: mm-core
 
+      - name: Generate public folder
+        run: |
+          bash mm-core/scripts/generate-public.sh
+          cd mm-core
+          git lfs pull --include=public
+          cd ..
+          
       - name: Replace content with mm-core public
         run: |
           rm -rf content/*
-          bash mm-core/scripts/generate-public.sh
           cp -R mm-core/public/* content/
 
       - uses: actions/setup-node@v3
