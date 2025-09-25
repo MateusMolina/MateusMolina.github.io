@@ -1,0 +1,30 @@
+---
+title: "Welcome 👋"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+---
+
+I’m Mateus Molina, a PhD candidate and researcher at RPTU. This blog is where I publish ideas and research notes.
+
+My recurring interests include music, how we gather and process information, how tools shape thinking, and how ideas link across domains.
+
+::: {.callout-tip appearance="minimal"}
+## Get in touch
+
+1. Subscribe to the [RSS](index.xml)
+2. Follow me on [GitHub](https://github.com/mateusmolina)
+
+:::
+
+::: {.callout-note appearance="minimal"}
+## Special thanks to...
+
+[Quarto](https://quarto.org/). Render engine for the website.
+
+:::
+
+## Recent posts

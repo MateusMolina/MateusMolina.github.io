@@ -1,0 +1,20 @@
+---
+title: "Mateus Molina"
+subtitle: "About me"
+about:
+  id: hero-heading
+  template: jolla
+  image: assets/logo.svg
+  links:
+    - icon: bi-journal-text
+      text: My Blog
+      href: "/"
+    - icon: github
+      text: My Projects
+      href: https://github.com/mateusmolina
+    - icon: linkedin
+      text: My CV
+      href: https://www.linkedin.com/in/mateus-molina-br/
+sidebar: false
+---
+
