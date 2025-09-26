@@ -1,16 +1,16 @@
 ---
 title: "Welcome 👋"
 listing:
+  id: posts
   contents: posts
   sort: "date desc"
-  type: default
+  type: table
+  fields: [title, date]
   categories: true
   feed: true
 ---
 
 I’m Mateus Molina, a PhD candidate and researcher at RPTU. This blog is where I publish ideas and research notes.
-
-My recurring interests include music, how we gather and process information, how tools shape thinking, and how ideas link across domains.
 
 ::: {.callout-tip appearance="minimal"}
 ## Get in touch
@@ -27,4 +27,6 @@ My recurring interests include music, how we gather and process information, how
 
 :::
 
-## Recent posts
+::: {#posts}
+
+:::

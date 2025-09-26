@@ -1,6 +1,8 @@
 project:
   type: website
 
+date-format: iso
+
 website:
   title: "blog.mmolina.me"
   site-url: https://blog.mmolina.me
@@ -17,7 +19,24 @@ website:
     type: overlay
   sidebar:
     style: "floating"
-    contents: auto
+    contents:
+      - text: About me
+        href: about.qmd
+      - section: "Posts"
+        href: index.qmd
+        contents:
+          - text: Essays
+            href: index.qmd#category=essay
+          - text: Researches
+            href: index.qmd#category=research
+          - text: Reviews
+            href: index.qmd#category=review
+          - text: Org
+            href: index.qmd#category=org
+          - text: Guides
+            href: index.qmd#category=guide
+          - text: PhD
+            href: index.qmd#category=phd
     logo: 'assets/logo.svg'
     logo-alt: Mateus Molina
   page-footer:

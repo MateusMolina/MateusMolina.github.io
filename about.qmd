@@ -1,6 +1,5 @@
 ---
 title: "Mateus Molina"
-subtitle: "About me"
 about:
   id: hero-heading
   template: jolla
@@ -17,4 +16,10 @@ about:
       href: https://www.linkedin.com/in/mateus-molina-br/
 sidebar: false
 ---
+
+I’m **Mateus Molina**, a PhD  researcher at [RPTU](https://se.cs.rptu.de/). 
+
+I work and research on the topic of safety of autonomous systems and digital twins.
+
+Please feel free to take look at my public links below.
 
