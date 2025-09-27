@@ -1,0 +1,64 @@
+---
+categories:
+- philosophy
+- essay
+- MCS
+date: 2025-05-14
+date-modified: 2025-09-26
+publish: true
+title: Learning about anarchism
+---
+
+Today I found out I have a really shallow understanding of Anarchism. It’s the same old thing over and over: we think we have a minimum understanding of a topic — enough to know about when someone’s talking about it — but we actually have a nuanced view of it from school, friends or you name it.
+
+It might be enough to understand what your local ancap friend is speaking, but not nearly scrapping the tip of the iceberg of all the collective thought that was put on this project.
+
+It’s just this illusion of having at least a small understanding of it that bothers me a lot — where all this confidence in my beliefs come from? Out of nowhere, out of blue.
+
+I’m not saying I am proponent of anarchism — I mean, I just said I barely understand it — but I see the value in having the discussion and understanding where the thinkers are coming from. People way smarter than me dealt with this issues and arrived at the conclusion that _this way_ of seeing things could fit the world better. It could be a solution to the failed project we live in.
+
+Once again, my one-sided friend of this Digital-Panopticon, Stephen West from Philosophize-This! spoke to me closely — around 1.5 hours, during my last failed attempt of a half marathon.[^1]
+
+I set up his 4 episodes about anarchism and had the goal of understanding it at least a _bit_ better.
+
+I’ll start with the last thing I remember: what I understood so far about anarchism was _actually_ Anarcho-Capitalism. But more on this later.
+
+I should be careful when defining each of these terms. He explains it’s sometimes hard for the proponents to agree on definitions and the core principles around anarchism. This is a feature and not a bug: this “free” way of thinking leads naturally to less constrains on the terminology. The disagreements are often in the implementation details; however they could also emerge from completely different schools of thought: basing the mediation device on the market opposed to the human, for example.
+
+## What’s in common
+
+But one thing seems to be constant: Authority-has-to-be-justified. The Representative-Democracy should justify itself for its continued existence; or less abstractly, the major of your city: he should also have to justify his position of power.
+
+This makes sense to me; why collectively pay somebody to sit there and do things that neither his peers nor he throughly understands! Managing such a complex system, with thousand, hundred thousands, millions of people is simply impossible. To have people with such a strong concentrated responsibility (and privileges) boggles the mind.
+
+Their answer? A bottom-up Federated-Society based on Direct-Democracy. Groups of people with similar interests form naturally — and it makes sense for each interested party to be able to decide matters that impact them (and opt out from matters that are irrelevant to them)
+
+These groups can become part of larger federations if they choose to. But the key distinction is the flexibility: they can opt-out easily when the conditions are not beneficial anymore.
+
+They can also “lend” power to someone chosen to represent the group. He is, however, merely a proxy to the opinions of the group — since votes are casted directly and not being decided by the head of it. The flexible opt-out mechanism behaves similarly here: if the person is not adequately representing the group anymore, he can be removed from the position.
+
+People argue that this horizontal organization emerges naturally from humans. Things start to go south, however, when societies grow bigger. The illusion is then sold to us, that we need to rely on bigger and complex mechanism to hold “democracy” together.
+
+He also mentions the distinction between Anarcho-Capitalism — the market-orient one — and Anarchism-Communism. However, I won’t try to differentiate both of them. I’m just now on the tip of the icerbeg of all that is out there.
+
+Some names I have to read more are Noam-Chomski, Errico-Malatesta, Peter-Gelderloos.
+
+## And I divagate
+
+In reality, more often than not, representatives — that are to be the proxies for the people — become proxies for the corporations: they act in a biased way and not on the interest of the electors. It’s so common that’s nauseating.
+
+Why it’s so _hard_ to implement alternatives to that.
+
+When we are immersed in this environment, born and raised, it’s difficult to see the way _out_ of the cage.
+
+Capitalism or Technofeudalism or whatever this state we are currently in is going to be defined and called is pervasive in every spectrum of being human nowadays.
+
+## I wonder
+
+How close the concepts of a Federated-Society is to a Federated-Architecture — that is a decentralized architecture where Autonomous-Systems collaborate towards a goal.
+
+In some sense, it’s really similar: the approach is also bottom-up. We define the goal and the systems come up with Instrumental Goals for performing it. Swap systems for a group of 100 people and the goal to being able to eat and suddenly we have someone opening a kitchen.
+
+Do the research in both areas — anthropology/philosophy and engineering — converge somehow? If so, how so? Federated Society and Federated Autonomous Systems - What is the overlap
+
+[^1]: A 15k. Failed in the sense of it not being a half marathon, but not a failure. Don’t get me wrong: I am really grateful of taking the time for taking care of myself :)

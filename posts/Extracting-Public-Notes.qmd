@@ -1,0 +1,14 @@
+---
+date: 2023-12-10
+date-modified: 2025-09-26
+publish: true
+title: "Extracting Public Notes"
+---
+
+From draft to usable information, utility is gained from various sources; one such source is publishing. Publicly publishing content—whether it be code, text, projects, or anything else—reaches the long tail like nothing else can. These passive side effects seamlessly integrate into my workflow. Keep things simple, but still conform to key requirements.
+
+Due to several limitations, fully publishing some types of work isn't always feasible. I approach this from a software engineering perspective: extract out the public aspects.
+
+I started developing a game and had to overcome certain limitations with the framework I was using. Although I don’t see the game becoming open-source anytime soon, I definitely see potential in the framework-specific solutions I developed during the process. These solutions can easily be turned into 1-2 libraries that could benefit many others.
+
+There is also a significant personal benefit: getting to know people, understanding their issues, learning new approaches, and solving problems I hadn't considered before. Spreading this information is done with a no-nonsense mindset -- which I value increasingly more.

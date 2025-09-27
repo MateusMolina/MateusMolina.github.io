@@ -1,0 +1,33 @@
+---
+categories:
+- essay
+- hyperfocus
+date: 2025-05-30
+date-modified: 2025-09-26
+publish: true
+title: Hyperfocus of the week - Refraction, Evolution and Belugas
+---
+
+I became suddenly interested in how Beluga whales gained their Melon — this bulbous, gelatinous part on the top of their head. It’s so weird, I had no idea about its function!
+
+Turns it out it’s used for communication and Echolocation. It contains fats of different densities which uses a phenomena known as Refraction to bend the wave and focalize into a beam. Refraction happens when a sound wave passes between two mediums that affect the speed of the wave differently.
+
+Let’s take sound waves passing from the air to the water: the speed increases in the water, since water is denser and thus molecules of water can bounce into each other more easily than the ones in the air — in the air they are space out.
+
+But swap the sound wave to a light wave and the behavior is the opposite: light travels _slowers_ in water. This happens because water scatters the rays as they travel, opposed to the usually straight path they do in vacuum or air — although in air there’s still scattering but less pronounced.
+
+A small trivia about this last fact: this gives rise to orange-y, red-y sunsets, since light of different wavelengths are scattered with varying levels: red-sh waves are longer and are more resistant to scattering, blu-sh ones are shorter and thus bump more easily into dust, water vapor or things that can scatter them.
+
+Coming back to refraction, if the difference between mediums is big enough and the waves comes in steep in relation to the normal of the interface between them, Total Reflexion can happen. Instead of the wave entering the new medium with a change in its angle it bounces back to the same medium — like a rubber ball thrown onto the ground at an angle.
+
+Cool. We covered the first part of my obsession of the last three days. The second part is how this gelatinous thing _evolved_ in the first place. Beyond just the Beluga’s melon, I was interested in how these highly-specialized organs evolve in the first place: it must had no purpose when it first started appearing due to a random mutation.
+
+One possibility is that a limited proto-version of the organ showed up and the trait got passed forward since it didn’t _harm_ the individual’s fitness. It was just there — and suddenly because of environmental changes it got used for the first time. Now the selection happens in the standard way we are used to: the fittest ‘melons’ got passed forward, since it provided critical advantages for survival. Therefore, it could have been once a Neutral-Mutation.
+
+I just looked online for other possibilities and was baffled to find a [contra-evolution christian website citing dolphin’s melon as an example of a complex structure impossible to have evolved step-by-step.](http://www.christcreated.com/pro/biology/adaption/irreducible-complexity/dolphin-melon/) It cites Sarfati, 1999:
+
+> For such an organ to have evolved, random mutations must have formed the right enzymes to make the lipids to be deposited in the right places and shape.  A gradual step-by-step evolution of the organ is not feasible, because until the lipids were fully formed and at least partly in the right place and shape, they would have been of no use.  Therefore, natural selection would not have favored incomplete intermediate forms.”
+
+At first it makes sense to refute evolution of features that doesn’t lead to a better survival of the individual _also_ in the incremental evolutionary stages. However, it could have been there as a proto-version — not harming the fitness — and some individual had the bare minimum of mutations necessary for it use for echolocation, even if rudimentary. This would have lend the individual an advantage, making it better at passing the genes forward. Why couldn’t this be an explanation? It seems possible.
+
+Or it could be an example of Exaptation: the melon could have served (or still serve) a purpose different than echolocation. It evolved because it improved the individual’s buoyancy for example — and it turned out it could be used for echolocation as well.

@@ -1,0 +1,34 @@
+/* css styles */
+a {
+	font-weight: 600;
+	text-decoration: none;
+	transition: color .2s;
+}
+
+.quarto-xref {
+    background-color: #8f9fa926;
+	border-radius: 5px;
+	padding: 0 .1rem;
+}
+
+.sidebar-logo, .about-image{
+	background: linear-gradient(135deg, rgba(var(--bs-link-color-rgb)), #11041f 100%);
+	border-radius: 50%;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s ease, box-shadow 1s ease;
+}
+
+.sidebar-logo:hover, .about-image:hover{
+	transform: translateY(-2px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#quarto-content{
+	padding-top: 40px;
+}
+
+.sidebar-menu-container {
+  height: calc(100vh - 500px);
+  overflow-y: auto;
+  scrollbar-width: none;
+}

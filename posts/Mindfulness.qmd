@@ -1,0 +1,10 @@
+---
+date: 2024-01-13
+date-modified: 2025-09-26
+publish: true
+title: "Mindfulness"
+---
+
+Living-in-the-present and actively pursuing this state of mind.
+
+A good text: <https://billwear.github.io/art-of-attention.html>

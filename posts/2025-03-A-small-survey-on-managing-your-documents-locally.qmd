@@ -1,0 +1,63 @@
+---
+categories:
+- research
+- done
+date: 2025-03-29
+date-modified: 2025-09-26
+publish: true
+title: A small survey on managing your documents locally
+---
+
+## brief
+
+1. I'm in a dire need of a solution to manage my personal documents: letters and all artifacts necessary for tax declaration.
+2. It's essential that I can host it myself on my server. I want to own the data.
+3. I want the trust and audit that comes with FOSS, so I'll limit myself to solutions that are FOSS.
+4. It must support some level of automation: when I upload a new file it should offer automatic tagging, description, the stuff I'm too lazy to type out.
+5. Eventually, I would like to plug a scanner in an automated workflow: I scan, and the printer should interact with this service somehow. I have to find out what's the common name for this interaction and which protocols are used — scanner send the attachment as email? Or is it some kind of API?
+6. In respect to the methodology of this survey I will put it frankly: I gave myself 1h30min to find and set up a solution; so I'll just google and analyze the top results. I have a pile of documents next to me that I need to get rid of before lunch 😅
+7. It should be actively maintained — so last commit in max. late 2024
+
+## matches
+
+### Paperless
+
+> This project has been around since 2015, and there's lots of people using it. For some reason, it's really popular in Germany -- maybe someone over there can clue me in as to why? [2]
+
+Why is it popular on the country that a service sends you 3 letters just for you to be able to log in in their app? No clue haha
+
+And it's archived since 2021. It provides the workflow with the printer/scanner I wanted by it scanning to a FTP server -- with the requirement that the scanner should also support this option.
+
+From their GitHub [1] I came across Mayan [2] which _is_ actively maintained. But it seems really bulky and more aimed at enterprise users, at least this was my first impression.
+
+### Docspell
+
+Docspell [3] seems nice. It supports these kinds of automated workflows by means of a NLP library. Let me look in the issues.
+
+> I've just toyed around with the latest llamafile release and I have to say: I think we are at the point where it starts to be feasible to have a LLM running locally for auto tagging on import.
+> -- [1, Issue 1996]
+
+This is interesting. A LLM service would kind of solve the issue, wouldn't it? Just a simple file server and a local LLM extracting tags and description would suffice. In respect to that (1) I have no idea about the quality gain of an workflow with just LLM and one using NLP; and (2) my server is weak to run LLMs locally -- and I don't want sensitive letters becoming part of a training data set. Also, a LLM+file server-based workflow would cost me _way_ more time to implement decently. Thus, it makes more sense to go with an off-the-shelf solution.
+
+It supports [different ingestion workflows](https://docspell.org/docs/feed/), e.g. documents send to an e-mail folder are automatically processed. So the scanner must support sending e-mails. A CLI is also provided with utilities like watching a folder for new documents and automatically picking them for processing. This is excellent.
+
+It also provides the option to store the files directly in the FS -- no DB. This is also good to have if I don't want to manage an extra service for the database. From what I understood I can just use the FS as file backend and an H2 file as metadata backend. Exactly what I was looking for.
+
+## Testing Docspell
+
+1. Using their [default docker-compose](https://github.com/docspell/docker/blob/main/docker-compose/docker-compose.yml) I get 1.34gb memory footprint. That's a bit too high for my taste. Most of it is due to [Apache Solr](https://github.com/docspell/docker/blob/main/docker-compose/docker-compose.yml) -- do I need it to run Docspell?
+	1. It's possible to use postgres as the full text backend. I don't think I need Solr for that, at least for my home use cases.
+2. I will leave it running for the day and watch for spikes while idle.
+
+## Wondering
+
+1. I think there's the opportunity for a simpler system: a markdown file linked to each attachment with the metadata stored in the frontmatter as YAML. It can be stored alongside the files and extensions/utilities just need to parse the YAML metadata and not integrate to any tool.
+2. The more I think about it the less I want to manage _another_ service for storing files. I just need the files in the FS of my home server with the metadata stored alongside. Maybe there is already a solution for that.
+
+## References
+
+[1]: [GitHub - the-paperless-project/paperless: Scan, index, and archive all of your paper documents](https://github.com/the-paperless-project/paperless)
+
+[2]: [Files · master · Mayan EDMS / Mayan EDMS · GitLab](https://gitlab.com/mayan-edms/mayan-edms/-/tree/master)
+
+[3]: [GitHub - eikek/docspell: Assist in organizing your piles of documents, resulting from scanners, e-mails and other sources with miminal effort.](https://github.com/eikek/docspell)

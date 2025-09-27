@@ -1,0 +1,18 @@
+---
+categories:
+- review
+date: 2025-06-14
+date-modified: 2025-09-26
+publish: true
+title: 2025-06 Book dump
+---
+
+## I Have No Mouth And I Must Scream Harlan-Ellison
+
+I liked the short book. More than the book itself, I was drawn to the concept it explored—the aftermath of AGI whose goals are twisted and misaligned with humanity.
+
+That said, I couldn't fully inhabit the characters. Perhaps the brevity of the story limited this, or perhaps the narrative served the concept rather than the other way around. Either way, it was a letdown for me as a reader—I like to be immersed in the story. It felt too much like an episode of Friday Forbidden Tales from Bae Jin Soo [^1]
+
+That persistent sense of "I'm here for the concept, not the story" stayed with me throughout. Maybe I came in with inflated expectations, having heard good things about it. So the disappointment may stem less from the author’s execution than from my own assumptions.
+
+[^1]: Not a critique of the webtoon—I love it, and the format suits a focus on concepts with throwaway characters. That said, I think Bae Jin Soo does a good job avoiding narrative dissonance.

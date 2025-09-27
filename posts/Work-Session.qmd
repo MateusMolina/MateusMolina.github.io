@@ -1,0 +1,78 @@
+---
+categories:
+- org
+date: 2024-05-26
+date-modified: 2025-09-26
+publish: true
+title: Work Session
+---
+
+A Work Session is a time-bound, goal-oriented method for getting work done. Breaking it down:
+
+- It has a fixed start time and duration.
+- It includes a list of well-defined SMART goals, ensuring that results and deliverables are clearly measurable.
+
+The method incorporates principles from Pomodoro and Deep Work, creating a structured work slot where:
+
+1. Deep work is encouraged.
+2. Rest is prioritized.
+3. Distractions are minimized.
+4. Purpose is at the forefront.
+
+## The Work Session (WS)
+
+The core unit of this method is the Work Session (WS). A WS consists of two halves, each lasting between 40 to 60 minutes. It's _recommended_, but not mandatory, to take a short 5–10 minute break between the halves.
+
+This break is yours to use as you see fit—if you've been working at a screen, consider standing up and stretching. There are no strict rules on how to spend this time.
+
+However, after completing both halves, you’ve successfully finished a WS. Congratulations! You now deserve a longer break of 20–50 minutes. Use this time to recharge—go for a jog, train, or do something that improves your well-being. Embrace Serendipity and have a conversation with someone. Taking this break seriously is just as important as the work itself.
+
+## The Three Steps of a WS
+
+There are three key steps to starting a structured WS.
+
+### 1. Plan
+
+Define what you want to accomplish. Use smartly structured tasks and choose one actionable step to focus on.
+
+Create a new file in your favorite text editor (or an analog notebook) and clearly write down the task you intend to complete during this WS.
+
+If the task is large, break it into smaller, manageable chunks—Divide-and-Conquer!
+
+**Most importantly, ensure that each task has a crystal-clear endpoint.**
+
+### 2. Work
+
+This is the step you're familiar with, but with one important addition: **logging**.
+
+In the same file where you wrote your task, document what you're working on, any obstacles you encounter, insights you gain, and any other relevant details. Keep the bar low—if something seems even mildly relevant, jot it down. You’ll thank yourself later.
+
+Logging your work:
+
+- Creates a record of your progress.
+- Reinforces the value of your efforts.
+- Enhances traceability, helping you track the challenges you faced and the solutions you applied.
+
+Consider these scenarios:
+
+> **Boss:** "What did you accomplish last month?"
+> **You:** _A few clicks away from the answer._
+
+> **You, six months later:** "What was I doing in this hobby project again?"
+> _A few clicks away from the answer._
+
+> **You, after reading your notes:** "Oh! I got stuck here last time. Now I know exactly where to pick up and move forward!"
+
+### 3. Long Pause
+
+Once the WS is over, you deserve a long break. Be kind to yourself—if you need a few extra minutes, take them. However, before ending your WS, ensure that your task is either:
+
+1. **Completed**, or
+2. **Replanned** for a future session.
+
+Since you’re actively logging, you’ll have a clear sense of whether your current WS is enough to complete the task. If not, take a few minutes to revise and break it down further. This is completely normal—over time, you’ll develop a better sense of what can realistically be achieved in a WS.
+
+## Example
+
+- In 1.5 hours, I will:
+ - Implement the DAO component of the app.

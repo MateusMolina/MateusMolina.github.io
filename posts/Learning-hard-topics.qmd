@@ -1,0 +1,25 @@
+---
+date: 2023-12-11
+date-modified: 2025-09-26
+publish: true
+title: "Learning hard topics"
+---
+
+Philosophy. AI. Another engineering field. The barrier seems impossibly high—almost unachievable. How can I focus on understanding difficult subjects when my mind and routine are already filled to the brim with other responsibilities? Important ones, yes, but still—other things.
+
+I find it hard to commit to learning new things, yet I understand the value of doing so. When I do, I feel different, as if I’m seeing the world through clearer lenses.
+
+One topic that has fascinated me is philosophy. And this is not a subject where you can cut corners. To engage in the conversation, you must first deeply understand the work that has come before you. Only then can you refine your own assessments and thoughts. They may not be novel, but they certainly belong to a particular epoch of human thinking.
+
+That’s what makes getting started so frustratingly hard. To understand what I’m talking about. To be able to contribute something meaningful.
+
+I don’t want to force an unnatural routine on myself—_Anki_ my way into philosophy. I’m also not nearly smart enough to just pick up Hegel and grasp his ideas on the first read. So far, my approach has been what I’d call soft learning: familiarizing myself with key terms and thinkers, even if just superficially. For that, I’m grateful _Philosophize This!_ exists—a podcast that teaches philosophy chronologically. I’ve gained so much just from understanding the historical context that gave rise to world-changing ideas.
+
+But this knowledge hasn’t stuck. It remains a kind of intellectual soup—fluid, fragile, forgettable. There are no existing roots for Kant’s ideas to latch onto. Everything is new. Conceptually new. And I wonder: How do people who aren’t in a classroom actually learn philosophy? I wish there were a clear _how-to._ Maybe there is.
+
+- I found [awesome-philosophy](https://github.com/HussainAther/awesome-philosophy). I appreciate the author's effort, but a list of books alone isn’t enough.
+- This [Reddit post](https://www.reddit.com/r/AskPhilosophyFAQ/comments/4ifqi3/im_interested_in_philosophy_where_should_i_start/) seems to tackle the issue more directly. I’ll definitely check it out.
+
+Maybe reading a textbook from an author who can guide me step by step is the best way to approach difficult subjects. The challenge would be making it fit into my routine—reading, reflecting, and distilling my insights into notes.
+
+I’m still unsure if this is the best method. But I do know that sporadically browsing YouTube, Reddit, or any other site will never be enough for deep understanding. I’m also curious about how language models might be used to teach more effectively. In theory, they could personalize a textbook to your learning style. They could even apply the _Socratic method_ on you—_ad nauseam._

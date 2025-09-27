@@ -1,0 +1,12 @@
+---
+date: 2023-12-31
+date-modified: 2025-09-26
+publish: true
+title: "Commit freely"
+---
+
+An environment where a project is a repository demands the feature of freely committing one's work. There is no burden of opening external tools; with just a click of a button, progress is logged. I mostly use Obsidian for managing my second brain, and a feature that I found lacking is the ability to manage multiple repositories within a single vault. The existing (and excellent) obsidian-git plugin does not provide this feature; it focuses on a single repository per vault. With this in mind, I decided it was finally time to create my own plugin to do exactly that.
+
+During my Christmas and New Year break, I built [obsidian-git-file-explorer](https://github.com/MateusMolina/obsidian-git-file-explorer). It is still in the beta stage, but the core functionality is there: enabling easy management of multiple repositories and live changes in the vault. There is still room for optimization. I have never before coded a complete project in TypeScript or JavaScript, and in many ways, I stuck with commonly used object-oriented patterns from Java—the language I am most familiar with—instead of doing things the more functional, canonical JavaScript way. To be honest, I still struggle to read a JS project; I'm not accustomed to how they nest callbacks and apply duck-typing or write functions that 'just work' but lack maintainability for someone external to the project. Of course, this is a generalization and entirely my fault due to a lack of experience with the language.
+
+Rant aside, 39 commits later, the plugin is ready. It works. Perhaps not as performantly as it should -- in fact -- I'd be really happy to accept any PRs helping me improve it.

@@ -1,0 +1,23 @@
+---
+categories:
+- org
+date: 2024-09-01
+date-modified: 2025-09-26
+publish: true
+title: Pin your habits
+---
+
+The concept of taking note whenever you are about to do a good or a bad habit.
+
+Mindfully observing your feelings, sensorial inputs and circumstances that triggered this behaviour provides information and reduces influences of automatized and heavily-ingrained neural pathways in place.
+
+Ask yourself:
+
+- What led me to wanting to do this bad habit?
+- How am I feeling right now? Bored? Agitated? Anxious?
+- Where am I?
+- What I did just before wanting to do this bad habit?
+
+Logging these instances provide a way to recognize patterns that often lead to the bad behaviour.
+
+When the pattern is there, the target is clear. One way to mitigate is to apply the concept of TAPs

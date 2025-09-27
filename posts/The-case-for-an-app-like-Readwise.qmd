@@ -1,0 +1,52 @@
+---
+categories:
+- essay
+date: 2024-05-19
+date-modified: 2025-09-26
+publish: true
+title: The Case for an App Like Readwise
+---
+
+The problem Readwise aims to solve is one I find frustrating: highlighting content and never revisiting it. Their approach—sending email digests of highlights—should work for me, assuming I check my inbox regularly. Yet, I’m still not a subscriber, and the reason boils down to a gut feeling.
+
+That same instinct is what led me to write in plain text and store my information using simple, transparent methods rather than relying on an external app that may not be around in a few years.
+
+Dependency on another tool introduces complexity and friction. The equation is straightforward: if the value a tool provides outweighs the added complexity, it’s worth using. The challenge lies in measuring both value and complexity. But in cases like this, the brain often finds a quick answer—manifesting as intuition. And so far, my intuition has served me well.
+
+At the same time, I have too many data silos in my life, and I want to break down the walls between them.
+
+## Why Do I Want to Remember My Highlights?
+
+What is a highlight, really?
+
+The meaning of a highlight depends on perspective. For me, it’s a _wow_ moment—something that struck me as unique, whether because of its aesthetic, phrasing, or a fresh take on an idea.
+
+If I saw my highlights every day, I’d remember books and articles better. It would give me a second chance to engage with ideas, to refine and reinforce them. I _want_ that. It’s a clear pain point for me.
+
+The ideal solution would be an interface so seamlessly integrated with my mind that it captures highlights from any medium I consume—whether digital or physical.
+
+## My Current System
+
+I highlight text in Kindle, Zotero, Google Keep, my PC, my tablet, and my phone—not to mention physical books and documents. Each of these platforms has its own format, and none of them talk to each other.
+
+At the moment, my notes remain isolated. I occasionally review and organize my Google Keep notes, archiving old ones and consolidating key points. I no longer bookmark pages in my browser—I just save links there.
+
+I also like Kindle’s sync between my phone and tablet, and I wouldn’t want to give that up.
+
+## Rethinking the Problem
+
+There are countless ways I consume information, and some (like physical books) don’t allow for easy API integration. External tools would be needed.
+
+But maybe a _highlight_ isn’t the most important thing. A raw highlight is just a snippet—it lacks context. What’s far more valuable is a **summary of the key ideas**, enriched with my own insights.
+
+This is what’s worth preserving. And this can be done _independently of any specific media format_. It simply requires an intentional process after consuming information—digesting, compiling, and simplifying key takeaways.
+
+## The Actual Solution
+
+The real solution isn’t software—it’s **a habit**: taking time to reflect on and consolidate what I’ve learned. If I use a simple system (like text files and Git) for this step, I’m not locked into any particular platform. I can do it from my phone, tablet, or computer—anywhere I have access to my notes.
+
+In other words, instead of trying to integrate every new format and tool into my workflow, the simplest approach is to **shift the focus from isolated highlights to structured reflections**—blended with my personal experiences and evolving understanding.
+
+This approach, however, doesn’t address the challenge of recall. That’s where Readwise excels: by sending daily digests that resurface past insights.
+
+So, if there’s one tool I _would_ subscribe to, it would be one that generates digests from **my** markdown notes—aggregating them into a gentle, well-timed invitation to review and reflect.

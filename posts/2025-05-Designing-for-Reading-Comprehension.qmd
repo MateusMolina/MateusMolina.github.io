@@ -1,0 +1,64 @@
+---
+categories:
+- essay
+- org
+date: 2025-05-01
+date-modified: 2025-09-26
+publish: true
+title: Designing for Reading Comprehension
+---
+
+1. Let us make the distinction between comprehending and knowing.
+ 1. Knowing a topic refers to possessing information about it — being aware that it exists. There’s no requirement regarding the depth of understanding — its meaning or applicability.
+ 2. Comprehending requires deep understanding of a topic — its meaning, implications, and surrounding aspects are well understood.
+2. Comprehension is a _much_ better goal when designing a reading system.
+3. Just being superficially aware of a topic is _not_ enough for most purposes. We can’t truly discuss such topics; we can only _fake_ a discussion.
+4. Systems designed for knowledge lack the ability to foster real thinking. Engineering courses, academic programs, and schools are prime examples of what happens when systems are designed for mere knowledge.
+ 1. You end up with information, but it’s disconnected — dangling — with no roots in your existing conceptual base. Any gentle breeze can pull it away. Suddenly, we’re not even aware of it anymore.
+ 2. I think about all the concepts I learned during school and engineering; they didn’t stick. At a foundational level, only the things I kept using and was more motivated about endured.
+ 3. One might say that it’s not the job of universities or schools to teach comprehension of these topics. But then — whose job is it? Do we have to figure it out ourselves? We spend so _much_ time in these places — really, a big chunk of our lives — and we’re left with blankness, or at best, a slightly less blank view of reality.
+5. Comprehension is, therefore, key. All meaningful learning systems should have this as their goal.
+
+## How to foster comprehension in a learning system?
+
+### The limitations of the brain
+
+1. We must recognize that we are designing systems for humans — humans with brains, and brains have limitations.
+2. I’ll base my comparisons on personal experience as a human being learning how to learn. So take this as a critical limitation of the discussion.
+ 1. Still, I claim that other brains behave similarly.
+3. Brains have a limited “comprehension bus factor”: expecting too much comprehension at once often leads to frustration.
+4. Brains learn _only_ when we add a new concept on top of a well-established base. Adding many dangling concepts at once is, again, a major source of frustration.
+ 1. Therefore, concepts should be _heavily_ interconnected.
+5. Simply regurgitating knowledge is boring. It creates the illusion of comprehension and benefits neither the speaker nor the listener.
+6. Concepts should be discussed. Through discussion, you discover gaps in your understanding and test the strength of your conceptual roots — where they are strong and where they’re weak.
+7. Brains are not naturally great at abstract thinking. It’s not that they can’t do it — on the contrary — but I argue that concrete instantiations of knowledge (via examples or mappings) are key to truly understanding something.
+
+### Putting all principles together
+
+1. A learning system should be designed to maximize discussion of ideas.
+2. Discussion is the primary process that generates comprehension.
+ 1. Through discussion, you connect ideas.
+ 2. But merely connecting ideas — as proposed in Active-Ideation — is not the ideal goal.
+ 1. An idea might be linked to thousands of others and still be dangling — barely surviving in our memory.
+ 2. This has happened with many concepts I often relate to others. But the connection is superficial — since neither concept was deeply understood. It becomes a shallow link and sometimes even detrimental, as we see links but can’t recall where they come from.
+ 3. Nor is recall improvement — as proposed by Progressive-Summarization — an ideal goal.
+ 1. I agree that notes should be designed to be recallable by your future self.
+ 2. But this alone doesn’t serve as a good goal for a learning system.
+ 3. It doesn’t differentiate between superficial knowledge and comprehension. Your brain will quickly learn how to game the system — giving you the _illusion_ of comprehension because you’re “doing it right.”
+ 4. You get stuck thinking, “The results will come if I keep doing this every day for years.” But you don’t _see_ them — yet.
+ 5. This falls into the Collector’s Fallacy: you’re conflating the collection of knowledge with comprehension. As we’ve seen, these are very different things.
+
+### A practical example: annotating books and papers
+
+1. What’s the value of a highlight? “To mark the important parts of a text,” you say.
+2. But why do that? “So I can remember the important parts.” But how does a highlight actually help with that?
+3. Here is where the argument starts to fall apart. “If I read the highlight, I’ll remember the key part of the text and won’t need to reread the whole thing!” Wrong. Try it — or maybe you already have. Take a dense paper and highlight the key parts. Do this regularly. You’ll soon find yourself highlighting large blocks of text — because there are so many “key parts” and unknowns you need to revisit later.
+ 1. Now return to the text a few weeks later. Did the highlights help you remember the key parts? I doubt it. It’s just a mess.
+4. Highlights are not for remembering information! Not even close. Don’t be unfair to yourself — acknowledge the limitations of your brain.
+5. Highlights are, first and foremost, visual cues. “Cues for what?” For marking that a _discussion_ took place. When no discussion happened, no highlight — simple as that.
+6. If you return to the text in a week and reread your discussion points instead, you’ll immediately be back where you left off. You’re up to date on the relationship between the text _and_ your more deeply-rooted concepts.
+7. If no discussion happened, you didn’t understand the text. That’s the key point.
+8. It’s not your job to maintain a comprehensive version of the author’s ideas in your knowledge base. That’s the job of Wikipedia, LLMs, or textbooks.
+9. Your job is to bring your _own perspective_ into the equation. This aligns with Active-Ideation, but the focus is not just on relationships — it’s on discussions.
+
+Discussion-is-the-Main-Goal!

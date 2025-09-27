@@ -1,0 +1,25 @@
+---
+categories:
+- essay
+- org
+date: 2025-05-19
+date-modified: 2025-09-26
+publish: true
+title: Hey, just write and things will be eventually okay
+---
+
+I’m still working heavily on the most difficult project I tackled so far: the project of a how to research. I see now, it’s incredibly difficult to maintain a system where critical thought, discussion, is incentivized. Just intaking information does not do any good; this is the realization I come to over and over again.
+
+I want to contribute meaningfully to the world. Contribute to technologies that I’m convinced will change the world. I find the area of safe autonomous systems essential for this — and I can only do a good work here if I think out of the box. Emergent ideas.
+
+So my systems should foment the creation of emergent ideas. I don’t want to make this piece a piece about how to achieve this, since the answer is still unclear to me. I do however think that I made some progress during these couple weeks.
+
+I realized I put so much weight on details: [On naming notes](2025-05-On-naming-notes.qmd) is the living prove. Of course, working on this project involve exploring the whole field of possibilities; nothing wrong here. However, experience has shown to me, that if you _just_ work on a project — let it kneed itself — you will end up on systems that conformed best (or best enough) to the task at the hand.
+
+Best in this case is heavily debatable. Normally what ends up happening is most friction points are filed out; if there’s an allowed path of least resistance it’ll get chosen eventually. And this is my grand master plan behind researching: I have to do it long enough. It’s _okay_, it’s fine if everything is slow, sometimes redundant in this first stage. Let it sit and do it long enough. You will find what works and what not.
+
+Nevertheless, this can only work if the optimization goals are clear from the start. These are (1) ideate and discuss: see the gaps and generate novel solutions for standing research questions; and (2) extract artifacts: a repository build in such a way that you can just “pluck” articles, posts or any deliverable. It should benefit from compound effects — pay us interest.
+
+I just want to get these goals right from the start. As long what I am doing are aligned with that and my gut feeling say that what I am doing is correct, then keep it. If I have a hunch that something can be improved or would lead to a goal being deviated: discuss it. Write about, remember Writing is Thinking.
+
+I guess this is what I wanted to hear, since I got a mind-freeing feeling after writing this. The task at hand is daunting. It’s enormous and open-endend: I understand why it can be overwhelming. However, you have implemented a system that is already providing utility; and you have also a support net if things go south.

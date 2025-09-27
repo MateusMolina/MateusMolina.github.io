@@ -1,7 +1,11 @@
 project:
   type: website
+  output-dir: docs
 
 date-format: iso
+
+execute:
+  freeze: auto
 
 website:
   title: "blog.mmolina.me"
@@ -11,10 +15,10 @@ website:
   # SEO
   open-graph: true
   twitter-card: true
-  
+
   # Components
   bread-crumbs: false
-  search: 
+  search:
     location: sidebar
     type: overlay
   sidebar:
@@ -37,7 +41,7 @@ website:
             href: index.qmd#category=guide
           - text: PhD
             href: index.qmd#category=phd
-    logo: 'assets/logo.svg'
+    logo: "assets/logo.svg"
     logo-alt: Mateus Molina
   page-footer:
     center:

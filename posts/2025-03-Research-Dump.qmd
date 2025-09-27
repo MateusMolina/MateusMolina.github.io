@@ -1,0 +1,178 @@
+---
+categories:
+- phd
+- research-dump
+date: 2025-03-06
+date-modified: 2025-09-26
+publish: true
+title: 2025-03 Research Dump
+---
+
+## Problem statement
+
+1. I started researching the topic of runtime safety management of Machine Learning (ML) components as a PhD candidate at the RPTU.
+2. They are often a black box with low understandability. This leads to variable uncertainty during the runtime.
+3. Current Risk-Assessment processes relies on worst-case operational assumptions made on the design phase
+4. Therefore we need a way to make the shift of certain aspects of Safety-Assurance to runtime. See Risk-Assessment-at-Runtime
+
+## Currently doing
+
+1. Reading the previous work from the commonly cited researchers in the field
+2. Reviewing relevant terminology, standards and concepts
+3. Mapping conferences, workshops, journals
+4. 2025-03-The-Roles-of-Uncertainty-Risk-and-Hazard-in-Dynamic-Assessment
+5. [Essay-based-Learning](Essay-based-Learning.qmd)
+6. 2025-03-Safety-Assurance-of-RMS
+
+## Reading list
+
+### Haupt and Liggesmeyer, 2019
+
+Paper: @Haupt2019166
+
+1. Autonomous-Systems operating in an unknown, dynamic and unstructured safety-critical environment requires different techniques for Safety-Assurance.
+2. The paper's contribution is a rule-based runtime safety monitoring component that observes system's deviations
+3. In the design phase the system is decomposed in its services -- borrowing from SOA -- is able to perform. For each combination of _service deviation_ and context (operational mode, like fully autonomous, and environmental info during operation) a HARA is performed. See Table 1 below.
+4. A risk monitoring service outputs a result akin to ASIL but for the target domain.
+5. They evaluated in a Tractor-Implement-Automation scenario, which is a Reconfiguration scenario where the configuration of the agricultural implement can be changed by the vehicle itself -- autonomously. This is really cool. Similar to I4.0.
+
+![Source: Haupt, 2019](assets/Pasted-image-20250318154738.png)
+
+### Patel and Liggesmeyer, 2021
+
+Paper: @patelMachineLearningBased2021
+
+1. He is using Support Vector Machine to implement Dynamic-Risk-Assessment at runtime for the Autonomous-Vehicles domain. "DRA-SVM"
+2. SVM is a Supervised-Learning technique, therefore he needed to manually select the features to be monitored
+3. His model gets as input the vehicle status data (acceleration, braking) and outputs Severity and Controllability rating
+4. It was validated using an Adaptive-Cruise-Control CARLA simulation. Both training and test data also come from the simulation. So theoretical applicability only.
+5. He mentions as future work the possible addition of a decision-making component that gets the outputs from his model and makes the decision of, I guess, reducing speed or braking.
+
+### Hartsell et al., 2021
+
+Paper: @hartsellReSonAteRuntimeRisk2021
+
+1. RESONATE uses probabilistic models and conditional relationships derived from the BTD formalism to dynamically assess the risk in a situation -- not quite rule-based.
+2. It takes information from monitoring systems — which can be ML components — and sensor information
+3. It relies on an extended BTD with probability information -- output from the design phase
+4. The component in the current form only outputs likelihood and _not_ _severity_
+5. _Uncertainty_ is _also_ not an output of RESONATE
+
+### Reich and Trapp, 2020
+
+Paper: @reichSINADRAFrameworkAssurable2020
+
+1. SINADRA is a framework encompassing risk analysis in both the design phase and runtime
+2. Design phase includes synthesis of the runtime model
+3. Main contribution is to get Residual-Risk at the runtime; claims previous work didn’t do that
+4. Runtime model is a Bayesian-Network (BN) — therefore, model based — which get the intended EGO behaviour as input and outputs Residual-Risk + Uncertainty. This data can then be consumed by a decision making component -- and then redirected to a Proactive-Risk-Control component e.g.
+5. No evaluation is given
+6. Explicit handling of uncertainty—from perception through to risk assessment
+7. Similar to Patel, but Patel outputs Severity + Likelihood, if I'm not mistaken
+8. Safety assurance is a key challenge; paper outlines the need to integrate the synthesis of the BN models into a systematic safety engineering process
+
+### Kläes et al., 2021
+
+Paper: @klaesHandlingUncertaintiesDataDriven2021
+
+1. They are applying Uncertainty-Wrappers -- additional models that enrich a DDM with Uncertainty information -- in a DRM framework
+2. They implemented an RSS validation scenario, in which the friction is considered to be dynamic and a source of uncertainty for estimating the Safe Distance.
+
+### Ertle et al., 2012
+
+Paper: @ertleUtilizingDynamicHazard2012
+
+1. They use a database of Safety-Principles -- specific known hazard causes -- to assess risks.
+	1. They mentioned the example of a plastic spoon approaching a burning candle. Toxic vapors evolve and the or the spoon starts to burn.
+	2. Therefore, one can conclude that heated plastic material can -- they use _always_ here, but I'm not so sure -- generate toxic vapor or starts to burn.
+2. The use case is an autonomous robot driving in a production plant. Every second (1Hz) they perform the process of (1) gathering environment data, (2) building the action plan -- the set of the possible movement outcomes, (3) performing the Risk-Assessment with the method described in 1 and (4) executing the plan. (See Fig 1 for a really badly-drawn schematic)
+
+![Fig 1](assets/Pasted-image-20250318161830.png)
+
+### Leite et al.
+
+Papers: @leiteSafetyAssuranceAutonomous2017, @leite2018dynamic, @leite2019dynamic
+
+1. the paper extends the previous work @leiteSafetyAssuranceAutonomous2017 by implementing a runtime risk assessment approach for autonomous and cooperative MCPS
+2. Configurations are certified at design-time and attributed a SIL to dynamic decision-making.
+3. For their use case -- Patient-Controlled-Analgesia -- smart alarm and automated interventions can be realized. The challenge is the insufficient context awareness and a lack of reasoning capabilities to deduce the current risk.
+4. each configuration, pre-certified with a ConSert Tree Tree, is monitored in real time
+5. Combined with ConSerts, it's possible to continuously check the matching between current top-level Safety-Guarantees of the MCPS -- Which can be subjected to Reconfiguration -- and the current top-level safety requirement on the other.
+	1. That means, (1) we can go from the selected configuration -- which is specified during design time -- and (2) analyze if the Safety-Guarantees are sufficient -- which can be provided by ConSerts.
+	2. I wonder what is the corresponding term of Safety Guarantee from ISO 26262?
+6. A Bayesian-Network is used to calculate a configuration-dependent risk metric based on sensor data and expert-defined parameters
+
+### Laxman et al.
+
+Papers: @laxman2020u-map
+
+1. Proposes a reference map -- U-map -- for handling uncertainties.
+2. It maps uncertainties with Hazards -- which then can be mapped to Safety-Measures
+3. Development of the U-map happens in the design phase.
+4. A probabilistic model Bayesian-Network was used for runtime update
+5. It mentions the possibility of the map being used as knowledge base for frameworks like MAPE-K feedback loops with the goal of analyzing the uncertainty and executing identified mitigation steps.
+6. The use case presented was a production scenario where e.g. a mobile robot can be a hazard for a human.
+
+### Schneider et al.
+
+Papers: @schneiderDynamicRiskManagement2024
+
+Papers: @schneider2010conditional, @schneiderApproachingRuntimeTrust2011
+
+1. Conditional Safety Certificates (ConSerts) are introduced to facilitate Dynamic-Risk-Assessment.
+	1. ConSerts map safety property types of required and provided services
+	2. Specified in boolean logic similarly to CFTs -- with gates and direct edges.
+	3. Allows associating runtime evidence to safety guarantees, which are associated with a SIL
+	4. I feel I need a more concrete example to better understand this concept
+2. Contributes to ideas of utilizing ConSerts to Support Trust
+3. Why Conserts don't support trust by default and must be extended?
+	1. Because they don't support trust certificates -- considering security _and_ the full spectrum of dependability -- target for them is mostly safety, whereas dependability also involve availability and reliability.
+
+## On doing things better
+
+- 2025-03-Reading-Papers-Efficiently
+- Doing-Literature-Review
+- Systematic-Literature-Review
+
+## On beginning the PhD with a survey
+
+1. It doesn't matter if I end up doing a SLR or not; I have to start reading systematically. That means, finding the gist of the paper and seeing the context, the assumptions, the pros and cons. See the paper in the big picture.
+2. I should start cataloguing what I'm reading.
+3. Create a new note with a set of questions that _must_ be answered for every paper being analyzed in the context of my research.
+
+## Dependability issue: global and project-specific notes
+
+1. It's often the case for a given reference -- a paper for instance -- I analyze it in its own note in my main vault but need to refine or enrich it with additional information.
+2. This additional information is often _project-specific_ and undesirable in a more generic context -- which is the case of my main vault.
+3. How can I add new notes to a project that reference the global note? So I don't repeat myself and still maintain consistency during an analysis?
+4. I think the concept of parent note might be handy. This parent note can be linked in the metadata of the child note as: `parent: example-parent-note` -- here assuming a wikilink format.
+5. Just for the context I plan to apply this for the following workflow:
+	1. I create a new global note for a reference -- let us assume a conference paper. There we add all relevant metadata of the publication _and_ my general remarks and notes about it (often answers for what/why/how/weaknesses/future work)
+	2. In a separated vault/repository -- where I am performing a literature review -- I create a new note which references the global note through the _parent_ property, as described in 4.
+	3. In this new note I add the survey-relevant (or more abstractly, project-specific) information.
+
+## Thoughts on executing a SLR
+
+1. Instead of blindly digesting all papers, one by one, I could apply a smarter approach:
+2. Sort by last author -- this is normally the head researcher. That way I sort by the research group. Then apply a sort by first author. Digest together all papers of the research group grouped by first author.
+3. This makes understanding the evolution of the thought-process inside a research grouper easier. Furthermore, it's easier for me to digest and process ideas that are correlated and/or are built on top of the previously defined concepts.
+
+## Concepts
+
+- Hazard, Risk, Safety-Engineering, Functional-Safety
+- Safety-Engineering vs Security
+- HARA, Risk-Assessment
+- Dynamic-Risk-Assessment == Risk-Assessment-at-Runtime ? find out
+- DRM vs Dynamic-Risk-Assessment
+- Machine-Learning-Models, Data-driven-Model
+- SIL, ASIL
+- DDI, ConSert, U-map
+
+## Standards
+
+1. IEC-61508: More abstract functional safety for EE
+2. ISO-26262: Functional safety for Road Vehicles
+3. IEC-31010: Risk assessment techniques
+4. DIN-SPEC-92005: Uncertainty quantification in ML
+
+## References

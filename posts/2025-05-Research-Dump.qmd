@@ -1,0 +1,12 @@
+---
+categories:
+- research-dump
+date: 2025-05-12
+date-modified: 2025-09-26
+publish: true
+title: 2025-05 Research Dump
+---
+
+1. 2025-05-SOA-and-MAS-Paradigms-applied-to-Reconfigurable-Manufacturing-Systems
+2. 2025-05-Understanding-Traditional-Safety-Engineering
+3. 2025-05-My-Research-so-Far

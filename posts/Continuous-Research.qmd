@@ -1,0 +1,53 @@
+---
+categories:
+- org
+- active
+date: 2023-12-14
+date-modified: 2025-09-26
+publish: true
+title: Continuous Research
+---
+
+## Brief
+
+1. Use [Essay-based-Learning](Essay-based-Learning.qmd) to facilitate this whole process. Journaling is an example of somewhat unstructured essay. From essays you can identify gaps in your understanding and brainstorm new ideas.
+	1. Practical example: start with a fleeting note. Write what you are thinking and what you know about the topic(s) you want to research. **Always start the day like that.**
+2. From there _diverge_. Make connections, create new incomplete research notes, merge existing ones.
+3. See what are the _gaps_ in your knowledge. Research _that_. Find papers or search your paper db with this query in mind. For each reviewed reference, create a reference note (aka refs).
+4. Bridge the gap between refs and researches and concepts.
+5. Related researches with concepts.
+6. Think about researches as semi-fleeting notes. You can easily generate, merge, group them. Important is that you start _connecting_. Formulate your researches smartly: `strong_verb + topic`
+	1. That way every time you think about creating a new one, you get prompted an existing one → Avoid duplicates and Dont-Repeat-Yourself
+
+> [!summary] To sum up
+> 1. Start with an essay
+> 2. Diverge into multiple researches and essays
+> 3. Address some of these pieces via a focused survey (1) with what you already have and (2) using any aggregator
+> 4. Compile the findings into refs
+> 5. Propagate the findings and insights to concepts and researches
+
+## Procedure
+
+1. Continuous research is composed by three main process: _inputting_, _consolidating_ and _reviewing_.
+2. _Inputting_ (or _ingesting_) describes the acquisition of information or sources. It must be as friction-less as possible.
+  1. transforms the raw content in atomic content pieces that are relevant to you. These are going to be referred as just _inputs_.
+  2. Here is where the annotation process happens. When you find anything relevant, quote it and add to input with a reference to the original source. Add also your comments in the same fashion.
+  3. If your preferred way of discovering content is using a phone, use the tools native to its OS to do the job. If you rather use an analogical notebook to do so, then do it.
+  4. If you input a source — like a paper for reading later — it stays in the ingesting queue for a second round; it must be converted to its _inputs_
+3. After the information is _ingested_ it must be consolidated. _Consolidation_ is the process of integrating the result of the previous step into the Second-Brain.
+  1. Whenever an _input_ is integrated, it should be archived, in order to not clutter the input backlog. What is archiving depends on how the _ingesting_ platform was implemented. For example, in _Google Keep_ there's an easy swipe-to-the-right action which archives a note. For a notebook, this could be achieved by crossing or tearing a page out.
+  2. This step also marks the consolidated pieces of information for review or not with the goal of achieving Incremental-Reading.
+  3. This step appends and/or connects the pieces of information with existing Evergreen notes
+4. _Reviewing_ happens only with the base of the already consolidated notes.
+  1. Here techniques for improving recalling can be utilized: Spaced-Repetition, Incremental-Reading
+5. Combining the execution process with [Work-Session](Work-Session.qmd), we arrive at Consolidation-Session, Review-Session, Input-Session
+
+## Common mistakes
+
+1. Delaying the _consolidation_: this leads to loss of context of the initial _inputs_ and significantly delays the whole process, requiring almost a new _input session_ for the source.
+
+## How to research in a work project
+
+Write development logs. If some question comes to your mind, for which you can not easily find the answer, write it. Ask why is the answer relevant. Now abstract away all tooling. How is this answered elsewhere. If it's answered elsewhere, then can it be answered in your specific context? If not, why not.
+
+This systematic questioning leads to the uncover of gaps in either the current documentation of the context you are working, or in science itself. The former leads to a good blog post. The second, to a scientific contribution.

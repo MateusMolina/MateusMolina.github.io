@@ -1,0 +1,19 @@
+---
+categories:
+- org
+- essay
+- pjm
+- active
+date: 2023-12-11
+date-modified: 2025-09-26
+publish: true
+title: A project is a repository
+---
+
+This realization came after extensive exploration into the Epistemology of work itself. It’s clear that you cannot impose a one-size-fits-all structure on every project; each project comes with unique requirements and demands, necessitating unique solutions. However, there is one statement that has held true across all my endeavours: a project is a repository.
+
+Not only is it a repository, but it is my personal repository. It reflects my view of the project and my personal interpretation of the chaos surrounding it. Notes serve as my personal breadcrumbs, reminding me where I left off and with what difficulties—often the reason I started in the first place.
+
+A project within the company I work for -- one involving a team with artifacts, Kanban boards, sprints, and processes-- can only be managed sanely through having my own perspective/view. My repository represents my interests and aids me in understanding what I am working on. In this repository, everything is a file.
+
+A new issue becomes a file there. A new meeting also gets its own file. An internal process receives its own document as well. Drawing from Unix principles and their derivatives, this approach has proven more relevant than I initially anticipated. Files are manageable units that ideally have high cohesion within themselves. They help me store thoughts and make sense of the world around me. Though I am not versed in neuroscience and thus cannot draw conclusions about how humans generally think, for myself at least, it works perfectly.

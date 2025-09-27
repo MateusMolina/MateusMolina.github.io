@@ -1,0 +1,32 @@
+---
+categories:
+- essay
+date: 2023-12-09
+date-modified: 2025-09-26
+publish: true
+title: Should Notes Be Public by Default?
+---
+
+A tough question—one I’m asking myself right now. I want to reduce the friction of publishing, to make blogging easier. But at the same time, I prefer to keep most of my output private, at least for now. That leads me to believe notes should be private by default. Only when they reach a certain level of maturity should they be made public.
+
+But after exploring other people’s digital gardens, I realize this argument isn’t so clear-cut.
+
+## Writing for a Public Audience Changes Everything
+
+Take this note, for example. Knowing it will be public, I’m putting extra effort into forming meaningful, structured sentences. I’m writing for a reader, not just for myself. It’s more work—work I sometimes wonder if I need to do.
+
+At the same time, making my thoughts public allows others to engage with them. Someone could challenge an idea, offer a new perspective, or help refine my understanding. If most of my thoughts remain private, I miss out on this valuable feedback loop.
+
+There’s also the challenge of deciding _when_ a note is good enough to be public. That decision itself creates friction. Ideally, writing—and sharing—should feel effortless. My tools should support that.
+
+## Public Notes Could Boost Motivation
+
+When something is open for feedback, it serves as a reminder that I’ve created something worth revisiting. This naturally leads to a kind of spaced repetition—an organic way of reinforcing and refining ideas. That’s a powerful benefit.
+
+But I wonder if, over time, this could turn into another source of pressure. Would it still feel like a tool for learning, or would it become an obligation?
+
+## My Take
+
+For now, I’ll keep my notes private by default—not just for privacy reasons but because I’ve seen how overwhelming unfiltered digital gardens can be. When everything is public—journals, half-formed ideas, random inputs—it can feel cluttered for both the writer and the reader. Everything seems unfinished. And while that _is_ the point, I’m not entirely convinced it’s the best approach.
+
+I believe in small bets, and this is one of them. I’ll try to share more _read-worthy_ material here—something closer to a blog, but one that stays in sync with my second brain.

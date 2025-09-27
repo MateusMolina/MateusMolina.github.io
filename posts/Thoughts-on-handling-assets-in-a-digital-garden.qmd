@@ -1,0 +1,89 @@
+---
+categories:
+- essay
+date: 2023-12-10
+date-modified: 2025-09-26
+publish: true
+title: Thoughts on Handling Assets in a Digital Garden
+---
+
+Avoiding images—or assets in general—in notes is unrealistic. They serve valuable purposes in a second brain. The real challenge is **handling them efficiently**.
+
+Until now, I had been dumping everything into a single folder in a Git repository on GitHub. The problem? Cloning the repository became impractical, especially on mobile, due to its growing size. Plus, non-text assets don’t benefit much from version control; they don’t leverage Git’s strengths.
+
+Looking for alternatives, I found that **Git LFS** (Large File Storage) could solve some of these issues. It essentially offloads large files to a separate server, replacing them in Git with lightweight pointers. It’s well-integrated with major Git hosting platforms and works seamlessly with the CLI. Best of all, it wouldn’t require any major changes to my workflow.
+
+However, after setting it up, I quickly hit a roadblock: **GitHub’s quota limits**. Within a day, I received an email notifying me that I had exceeded the **1GB free bandwidth limit**. The only solution? Buy additional data in 50GB increments.
+
+I don’t want another recurring expense, especially for something as simple as storing images. But without a solid Plan B, I started exploring alternatives.
+
+---
+
+## Option 1: **Imgur**
+
+Since none of my assets are sensitive, storing them on **Imgur** could work. It even has an [Obsidian plugin](https://github.com/gavvvr/obsidian-imgur-plugin) to streamline uploads.
+
+However, I spotted two potential drawbacks:
+
+1. **No built-in mass upload** – I’d need to write a script to migrate existing images.
+2. **Unclear mobile integration** – The plugin's implementation for mobile isn’t well-documented. I’d need to test it myself.
+
+My main concerns with Imgur are **long-term availability** and **offline access**. They aren’t deal-breakers, but they matter.
+
+A proper migration would involve:
+
+- Scraping my vault for image references
+- Uploading everything to Imgur
+- Replacing links in my notes with the new URLs
+
+A half-day effort, at most. ☕
+
+---
+
+## Option 2: **Keep Using Git (Without LFS)**
+
+The simplest solution? **Revert back** and stick with my original workflow.
+
+✅ **Pros:**
+
+- No extra cost
+- No new tools to integrate
+- No disruptions to my note-taking process
+
+❌ **Cons:**
+
+- Large repositories still slow down cloning
+- Mobile usage remains inconvenient
+
+Still, for the short term, this is the easiest and most reliable solution.
+
+(Reverting from Git LFS, by the way, wasn’t _as_ easy as I hoped. [This](https://github.com/git-lfs/git-lfs/issues/3175#issuecomment-718400473) didn’t quite work.)
+
+---
+
+## Option 3: **Setting Up My Own Server**
+
+My first thought? **Security risks**. I don’t want to deal with that.
+
+A self-hosted solution might be the **coolest** option, but it would also demand the most effort. Not ideal for now.
+
+---
+
+## Option 4: **Paying for a Cloud Storage Service**
+
+A more hands-off approach would be to store assets in **Google Drive** or **Koofr**, using permalinks.
+
+This could work, but it still feels unnecessary for something that should be simpler.
+
+---
+
+## Final Thoughts
+
+For now, I’m leaning toward either **sticking with Git** (despite its limitations) or experimenting with **Imgur** for lightweight, public assets.
+
+If I do move to Imgur, I’ll need to:
+
+1. Write a script to migrate and update links.
+2. Test how well the Obsidian plugin works on mobile.
+
+Long-term, I’d love a **frictionless, decentralized way** to handle assets—one that doesn’t require workarounds or recurring costs. But until then, I’ll take the path of least resistance.

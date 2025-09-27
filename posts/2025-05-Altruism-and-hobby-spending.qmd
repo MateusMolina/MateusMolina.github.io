@@ -1,0 +1,61 @@
+---
+categories:
+- philosophy
+- essay
+date: 2025-05-24
+date-modified: 2025-09-26
+publish: true
+title: Altruism and hobby spending
+---
+
+Ordinary People are Evil: and this from a very simple argumentation. It’s _our_ moral duty to donate to charity the money otherwise spent on luxury.
+
+Peter-Singer’s argument begins with the premise that we have a moral duty to assist in solving _very bad_ problems, provided that we are capable of doing so. Are famine and poverty _very bad_ things? Then you see where this is going.
+
+Donating to charity serves as proxy for solving these _very bad_ things — and, if it’s so easy to donate to them, why we choose, over and over again, to buy a cup of expensive coffee, or buy a car, or anything superfluous?
+
+This is hard to refute. I could say that spending money as we see fit doesn’t make the average citizen _evil_: _evil_ is the underlying system that coerces us to do so — a system which was not designed with this moral duty in mind.
+
+What if superfluous things do serve a _purpose_? They often signalize power — think designer items — and might serve as a ‘social boost’ for the individual to eventually earn more. By earning more he is objectively more powerful when performing this moral duty.
+
+Should this moral duty be seem as accumulative or be exercised daily to be fulfilled? Consider the example of a rich guy who never donate a single cent to charity, _but_ just before he dies he distribute his whole wealth to charity institutions.
+
+One could make the case that our moral duty is to accumulate the maximum possible wealth — to fulfill one’s wealth potential — enabling the donation of bigger sums in the future. See [Earning to give](https://en.wikipedia.org/wiki/Earning_to_give).
+
+To make the example even more morally complex, let us assume the rich guy has done so, not because of his moral duty, but by pure spite of his sons neglecting him in the adulthood. The donation was more a moral lesson to his sons _than_ a fulfillment of his moral duties.
+
+Is the moral duty in our internal perception or in the sum objectively donated? Or in both?
+
+These are the sort of questions I ask myself when translating the argument to our society. I do think is important to exercise frugality independent of social status. But how much to do while keeping oneself motivated, interesting and sane in the society? Luxury is also sometimes hard to detect — there are brands whose line between utility and luxury is blurred, hence what I often catch myself saying: “it’s more expensive, but I trust the brand X and I know it will probably last way longer than the cheaper one from brand Y.”
+
+The line is so blurred that the perceived qualities of a given brand — a maintainable, reliable, durable product — are used as justification for its luxury. How far do theses supposedly quality attributes cover its higher price is up to debate.
+
+“I justify drinking this fancy light-roasted Nicaragua coffee brewed using my ceramic v60 because, seriously, without coffee I can’t even _start_ working.” This one hits home. Can I justify spending 10 times what some people have to eat in a fancy coffee so the gentleman me can _start_ working… from home?
+
+These are part of what I call hobby-spendings; the money I spent upgrading my mini recording studio belongs to this same category. They are definitely an exercise of luxury: I didn’t have to spend the amount I did. But does this make me evil?
+
+In some sense, yes. However, hobbies provide me _purpose_ and help me stay _sane_. These are arguably important functions; therefore, when we perceive the whole picture, an unmotivated me wouldn’t earn as much money as a motivated me. Is it then my fault that I need these little escapisms from daily life in order to properly function in society? Should I carry the moral burden of not fulfilling this moral duty alone? Or did society make me evil, or by society being evil am I bound to also be?
+
+These are attempts of justification; but they are weak. Had I donated the money I spent in hobbies, society would have been better off — with the cost of me being a more uninteressant and unmotivated person. Is it a fair price to pay? Or is there a limit — a common sense limit — of how much you can spend in hobbies and still be morally fair?
+
+Currently I draw the line based on a hobby enjoyment utility: if the purchase helps me enjoy the hobby more, then I justify spending more money on it. I know, I know, it’s so easy to _game_ this artificial line, “Oh, I need one more guitar because.. because.. this one never goes out of tune! So I can use the time practicing and not tuning it!” Clearly a luxury-driven purchase I would say. Or maybe not? “hear me out, player X uses this guitar and listen to it for a second: it’s amazing. How can I even start recording my songs without having it?” Stop!
+
+“I’ll buy jacket X because it protects me _good_ against wind and cold. It costs more but I’ll be warm for the average 10 min per day I stay outside in the winter.”
+
+“Oh look. That game is in sale in Steam! Let us buy it so we can play together for 2 hours and never touch it again.”
+
+“I’ll gladly pay a bit more for this mayo, because the other tastes a bit odd.”
+
+We have the luxury of spending money so freely; should we relinquish that and live as frugal as possible? Or should we delegate the moral burden to society? Or should we just take part in consumerism and live as usual — since it keep us sane?
+
+Pledges like [Giving What We Can](https://en.wikipedia.org/wiki/Giving_What_We_Can) or [Earning to give](https://en.wikipedia.org/wiki/Earning_to_give) are incomplete realizations of Effective altruism as proposed by Singer. They tackle the issue from the monetary perspective, but not from the internal agent perspective. Frugality can be a consequence of taking the pledge, but not instrumental for it.
+
+Another aspect is how different is to donate to a charity and to donate to, let’s say, your mother who is in need? Why choose your mother, who let’s assume is not in risk of famine due to her support net, but need the money to sustain herself and be motivated? Is that a luxury spending — spending in your mother so that she can live better instead of spending to solve world famine?
+
+Solving these _very bad_ issues is a shared moral burden, which are best solved bottom-up one could argue. Does this legitimizes conquering countries whose management are inefficient in tackling the basic subsistent needs of the population? Crazy to think about this, that even war could be legitimized by this simple thinking exercise.
+
+When we maximize one goal and forget about others — or the context where the goal is to be pursued — we get into the risk of the genie effect: there are many paths to realize a given goal, but the genie likes to fulfill the wish while also maximizes suffering for the wisher. I know, this is not to say that society would act as a genie; but it could! It’s a possibility one can’t ignore.
+
+To completely delegate the moral burden to society is to float in the waves of its decisions. An inert life full of soma-like acceptance.
+
+Morally just, morally incorrect.

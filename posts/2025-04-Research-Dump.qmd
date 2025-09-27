@@ -1,0 +1,54 @@
+---
+categories:
+- research-dump
+date: 2025-04-03
+date-modified: 2025-09-26
+publish: true
+title: 2025-04 Research Dump
+---
+
+## Goals for 2025-04
+
+1. 2025-04-G1: write a draft of a position paper about dynamic risk management in flexible production systems
+
+## A new approach
+
+1. I started dividing the researches into individual components. Every of them deserves a survey by its own merit — since it’s extremely difficult to survey all of them at once, based on a broad, general query.
+2. The main consequence of this approach is a more interconnected research, relying on backlinks.
+3. I _still_ don’t have a good solution for the ingestion process: [Continuous-Research](Continuous-Research.qmd), the collection of methods I compiled for maintaining and expanding knowledge, is lacking in this regard.
+	1. In particular, I tend to lose focus. I’m reading a piece, and suddenly I’m caught in another topic — almost a requirement for me to move forward in the original goal.
+	2. What I end up having is many researches that, at least, overlap, and more often than I would like to admit, are completely redundant.
+4. Another challenge I currently have is linking researches with references.
+	1. For each piece of reference I read, I write a note that’s referenceable to a $Bib\TeX$ item by its citekey. There I add my notes and highlights.
+	2. Often a reference contributes to a research and I keep asking myself the same question “should I add a related-work-like summary into the research or not?” If yes, what about Dont-Repeat-Yourself? What about a possible desync. between ref and the research?
+	3. I know, I know. It’s stupid, but that’s where my brain goes. This generates friction and stresses me out.
+5. I also would like to keep working on research dumps — public pages that summarizes what I did during the month.
+	1. I hate that this new approach (more segregated researches) lead me to just linking this file with many non-public researches. They are not public, because they are mess of citations, half-baked thoughts.. simply not ready for someone to read!
+6. I’m working on this paper: The Role of Dynamic Risk Management in Flexible Production Systems
+	1. This page is currently _not_ available for the public. The reason is that it is a big mess at the current state.
+	2. I’m also afraid of misunderstanding an author’s work deeply. Even if it’s a preprint, I want to keep a high-enough standard of publication.
+	3. However, I’m thinking about how to deploy incremental preprints of my work (is this a thing?)
+	4. Also: now I clearly stated my focus: I want to understand DRM for flexible production systems (still unsure about the precise term to use)
+
+## Continuous-Safety-Assurance
+
+1. @patelEnhancingContinuousRisk2024
+2. @khanDynamicRiskManagement2016
+3. @schneiderDynamicRiskManagement2024: add missing refs
+
+## Dynamic-Risk-Assessment
+
+## Safe-Reconfiguration
+
+1. @kloseBuildingBlocksFlexible2021
+2. @pelzerConduciveDesignSafety2022
+3. @hillenPlugandProduceSafelyEndtoEnd2022
+
+## Representing-Reconfiguration
+
+## Uncertainty-Assessment-of-Safety-Evidences
+
+## Surveys Misc
+
+1. @raveendranComprehensiveReviewDynamic2022
+2. @rajabliSoftwareVerificationValidation2021

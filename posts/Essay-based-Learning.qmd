@@ -1,0 +1,15 @@
+---
+categories:
+- essay
+- org
+date: 2025-03-25
+date-modified: 2025-09-26
+publish: true
+title: Essay-based Learning
+---
+
+Thoughts arrive in an unordered manner. This is an issue for anyone trying to learn about different concepts—especially when multiple ideas are explored simultaneously. Learning about a forest, for example, may lead to deeper inquiry into trees, leaves, or, even more complexly, the animals living there. Everything is open to deeper understanding, but knowing when to stop subdividing or when to explore the breadth of related concepts is a difficult skill to develop.
+
+Much of my writing touches on this problem: How can I navigate this body of knowledge while remaining sane and still achieving productive results? There must be at least some degree of _systematic_ organization. At the same time, care must be taken not to overdo it—too much system, too much framework, and it begins to hinder research itself.
+
+One approach I find particularly useful is thinking through writing. The process of composing an essay helps me clarify my thoughts and identify misconceptions or gaps in my understanding. I call this approach _Essay-based Learning_: writing small, opinionated essays that synthesize my current understanding of a topic. These are not just Wikipedia-like descriptions of concepts but rather focused pieces addressing specific research questions. Less formal than an academic article, yet structured enough to serve as a foundation for one.

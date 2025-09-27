@@ -1,0 +1,71 @@
+---
+categories:
+- essay
+- org
+date: 2025-05-18
+date-modified: 2025-09-26
+publish: true
+title: On naming notes
+---
+
+Interestingly enough, I already worked on this project in October of 2024. I mentioned a link from Andy-Matuschak where he discussed his naming scheme.
+
+Unfortunately I didn’t delve much into the topic — and maybe that’s why it came back hunting me today. But let’s jump back to one of Andy’s statements:
+
+> These [the note titles] are often declarative or imperative phrases making a strong claim. This puts pressure on me to adequately support the claim in the body.
+
+I noticed that I currently don’t do that. I think it could compromise finding the note again in a later moment. And this is a big turn off: if you don’t find the note again, you end up with many notes touching the same problematic but without any connection. A good naming system should also optimize for finding the note again!
+
+But that’s not a comprehensive critique of this naming scheme. Not at all. I’ll get back to it eventually.
+
+Another technique he mentioned is to use questions as titles (something I also heavily considered). A question forces the need for an answer; and sometimes that’s exactly what we wants. Thus naming notes based on this concept makes sense from the perspective of the outcome we want and the way we think — asking questions, hypotheses and looking up in the answer space is second-nature when are trying to solve a problem.
+
+One common realization is that concept notes get us only _so_ far. We need middle ground notes that symbolize their work-in-progress nature — they are thoughts being built or relevant thoughts from others that we want to preserve for future discussions.
+
+I also don’t think it’s _inherently_ bad if the note has less re-discoverability (is that a word?). It’s okay if some notes only resurface when you are in a given mental state.
+
+So the question I ask is which naming rules lead to better thinking? The name of the note is important because it _constrains_ the scope of the note. And the scope we work on _constrains_ the types of connections we can make and the emergent novel thoughts we can potentially make.
+
+Balancing context is key when designing notes.
+
+## Notes that enable better thinking
+
+On one side we have notes that are clearly bound to a concept, to a reference note, to a day, to a month. There’s no or little ambiguity on how to call them. On the other side, when working on the project of understanding a concept better — the pros, the cons, the historical influx of ideas that shaped it — we want to rely on a set of guidelines to shape it into a serviceable state: one that incentivizes discussion, connection and convolution with our minds.
+
+I like the idea of writing the strongest context cue first on the title. For a more fleeting note/essay this manifests in the form of a date, or a simplified version of it with just the year and the month — see this note for an example. It elegantly attaches the quality of being “fleeting” to it without tags or any special mechanisms.
+
+### An use case
+
+To shape this idea even further I’ll mention the use case of annotating a academic paper — since it’s activity I’m currently doing a lot. I want to be able to put the author’s idea in contrast to other authors; and also preserve it for future instances, in which I want to retrieve this knowledge.
+
+For that I am often relying on implicit indexes: if the given reference contributes to a new challenge for a given topic, I link it to a note called “Challenges of [topic]”. I call it implicit index because the indexation is happening _implicitly_, via backlinks: if I want to retrieve the whole mapping I go this “challenges” note and see all its backlinks.
+
+I like this; it’s flexible enough and I’m not repeating myself.
+
+So from here we start to see the emergence of a new type of note. It’s not a concept _per se_, but it is a _research_ about this topic.
+
+They’re researches in their simplest form: state of art researches. Naming them is straightforward: I see the pattern emerging of combining a _strong noun_ with a _topic_. Another example is _Use cases for [topic]_.
+
+There’s two aspects of a research that are relevant: the backlinks — who is contributing to and using this research; and its content: which patterns emerge from it? Which other sub-researches emerge from it? And here it becomes evident its “open-ended” nature. We will hardly know if the research is completely _resolved_ — of course, sometimes it’s possible; however, more often than not, the best we could do is give our best shot based on what we currently know.
+
+They are not _everlasting_: Researches are fluid!
+
+## Researches are fluid
+
+Opposed to atomic concepts with a clear story and application behind, researches are open-ended by nature. Even the research question behind it can change and even become stale, obsolete, get refined, get expanded.
+
+A new contribution can come and completely change your understanding and previous notion/answer to it. And this is _by design_. Therefore, a good system for representing them should also consider its fluid nature.
+
+But how to name them?
+
+As discussed, for simpler notes the pattern of a strong noun + topic can be helpful. However, for the vast majority of research questions we need a bit more variety in the expression. Fact is that I am still learning how to do it well. I still haven’t converged into an adequate method for doing that; oftentimes I name it as questions — closely resembling the research question, with hows, whats and so on; in others I think a statement fits better.
+
+Maybe this lack of consistency is not entirely bad. But it’s a consequence of how this particular research is more commonly expressed out of there. Nevertheless, this is still an open topic to me.
+
+## claims as notes
+
+I support the idea from Andy-Matuschak about creating notes for strong claims. I like that these notes can be naturally used mid sentences due to the natural way it’s formulated.
+
+More broader than that, I argue for creating notes for every discussion-worthy claim. If a note is strong, then it’s helpful to extract in its own note. You might even bind the reference as its main context like “[claim] by [author], [year]".
+
+To help _contain_ the messier nature of having multiple notes, it’s helpful to use Indexes or Outline-Notes.

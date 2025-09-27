@@ -1,0 +1,24 @@
+---
+categories:
+- essay
+date: 2025-03-26
+date-modified: 2025-09-26
+publish: true
+title: Heuristics to reduce the chaos in life
+---
+
+I'm a big fan of simple things that abstract a lot of complexity and add value to my life. However, it's difficult to find them unless they come from generational knowledge—the kind of wisdom your parents passed down, which you follow out of habit built over the years.
+
+A good generational example is _waking up early_—and, of course, its counterpart, _going to sleep early_. This simple heuristic translates to improvements in many areas of your life: (1) you have more _work time_, which increases productivity; (2) you have more _hobby time_, which boosts happiness; (3) you can see the sun 🌞 early in the morning, which brings numerous health benefits [1]. And these are just the surface-level benefits.
+
+Another example that has worked for me—and one I had to learn on my own—is maintaining _buffers_. Finances can be chaotic, and sometimes you have to pay for unplanned expenses. Part of life is that some taxes or cost centers—like a car—demand lump-sum payments that are hard to foresee. An easy solution is to have a buffer account. Every month, money gets added to it, and any extra funds at the end of the month can also go there. This practice gives every dollar or euro a purpose, another helpful heuristic that isn't always easy to learn.
+
+These measures might seem simplistic or even obvious—as if everyone already does them—but I appreciate them more and more because they bring immense value without much upkeep.
+
+They are flexible enough to be domain-independent. The concept of buffers is useful in a multitude of applications: finances, computer science, inventory management, and more. Once you learn and implement them, you feel that a once complex problem has become much more manageable. That peace of mind is priceless.
+
+I wonder what other helpful (perhaps hidden) heuristics I follow every day without even noticing. I wonder what else is out there that could heavily simplify my life but that I simply haven't come across or acknowledged.
+
+## References
+
+[1]: [Morning Sunlight Benefits \| Ask Huberman Lab](https://ai.hubermanlab.com/clip?sids=chunk_49345)
