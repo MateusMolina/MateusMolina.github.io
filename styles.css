@@ -26,9 +26,3 @@ a {
 #quarto-content{
 	padding-top: 40px;
 }
-
-.sidebar-menu-container {
-  height: calc(100vh - 500px);
-  overflow-y: auto;
-  scrollbar-width: none;
-}
