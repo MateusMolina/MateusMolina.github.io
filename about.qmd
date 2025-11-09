@@ -11,9 +11,12 @@ about:
     - icon: github
       text: My Projects
       href: https://github.com/mateusmolina
+    - icon: music-note
+      text: My Music
+      href: https://absurdsilence.mmolina.me
     - icon: linkedin
       text: My CV
-      href: https://www.linkedin.com/in/mateus-molina-br/
+      href: https://www.linkedin.com/in/mateusmolina
 sidebar: false
 ---
 
