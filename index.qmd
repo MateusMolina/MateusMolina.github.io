@@ -15,8 +15,9 @@ I’m Mateus Molina, a PhD candidate and researcher at RPTU. This blog is where 
 ::: {.callout-tip appearance="minimal"}
 ## Get in touch
 
-1. Subscribe to the [RSS](index.xml)
-2. Follow me on [GitHub](https://github.com/mateusmolina)
+- Subscribe to the [RSS](index.xml)
+- Follow me on [GitHub](https://github.com/mateusmolina)
+- Send me an [e-mail](mailto:hi@mmolina.me)
 
 :::
 
