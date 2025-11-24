@@ -1,0 +1,67 @@
+---
+title: "Publications"
+about:
+  id: hero-heading
+  template: solana
+  links:
+    - icon: bi-person
+      text: Mateus Molina
+      href: "/about.html"
+sidebar: false
+---
+
+## Open books
+
+I'm currently working on following books. Feel free to contribute!
+
+::: {.publication-item}
+
+### Machine Learning + Safety Playbook 
+
+A collection of my notes on **machine learning** and **safety**. The goal is to create a reliable resource for the core concepts and first principles needed to understand this field.
+
+<div class="about-links">
+
+<a href="https://mlsafety.mmolina.me/" class="about-link" rel="" target="" data-original-href="https://mlsafety.mmolina.me/">
+    <i class="bi bi-file-earmark"></i>
+     <span class="about-link-text">To the book</span>
+</a>
+</div>
+
+:::
+
+::: {.publication-item}
+
+### The Resource: (Home) Audio Engineering 
+
+Home studio building. Mixing. Recording. All at home. I always wanted to learn about it and I think I have gathered along the years of sometimes consistent, other inconsistent practice, useful knowledge about this topic to write about it. 
+
+<div class="about-links">
+
+<a href="#" class="about-link" rel="" target="" data-original-href="#">
+    <i class="bi bi-calendar-event"></i>
+     <span class="about-link-text">Coming soon...</span>
+</a>
+
+</div>
+
+:::
+
+::: {.publication-item}
+
+### The Resource: Home Server
+
+NAS via Samba, DNS sinkholes, containers, document management and taking care of a Linux server: starting from first principles.  
+
+<div class="about-links">
+
+<a href="#" class="about-link" rel="" target="" data-original-href="#">
+    <i class="bi bi-calendar-event"></i>
+     <span class="about-link-text">Coming soon...</span>
+</a>
+
+</div>
+
+:::
+
+

@@ -26,6 +26,8 @@ website:
     contents:
       - text: About me
         href: about.qmd
+      - text: Publications
+        href: publications.qmd
       - text: "ML Safety Playbook"
         href: https://mlsafety.mmolina.me
       - section: "Posts"
