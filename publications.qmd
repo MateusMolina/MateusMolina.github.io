@@ -34,7 +34,7 @@ A collection of my notes on **machine learning** and **safety**. The goal is to 
 
 ### The Resource: (Home) Audio Engineering 
 
-Home studio building. Mixing. Recording. All at home. I always wanted to learn about it and I think I have gathered along the years of sometimes consistent, other inconsistent practice, useful knowledge about this topic to write about it. 
+Home studio building. Mixing. Recording. All at home. I have always wanted to learn about this, and over the years, through a mix of consistent and occasional practice, I believe I have gathered useful knowledge on this topic to write about it.
 
 <div class="about-links">
 
