@@ -44,7 +44,7 @@ entries:
   - key: mbse_aas_sesosss_2023
     type: paper
     title: "Achieving Interoperability with MBSE and Asset Administration Shells: Integration of MATLAB/Simulink and BaSyx"
-    authors: "Molina, M. & Treichel, T."
+    authors: "Molina, Mateus & Treichel, T."
     venue: "IEEE/ACM SESoS 2023"
     year: 2023
     url: "https://doi.org/10.1109/SESoS59159.2023.00005"
@@ -62,7 +62,7 @@ entries:
   - key: thesis_hil_sil_2022
     type: thesis
     title: "Ermöglichung von Hardware-und Software-in-the-Loop durch die Integration von BaSyx und MATLAB/Simulink"
-    authors: "Molina, M."
+    authors: "Molina, Mateus"
     venue: "Thesis"
     year: 2022
     url: "https://doi.org/10.13140/RG.2.2.19505.70243"
@@ -70,10 +70,18 @@ entries:
   - key: thesis_soa_i40_2023
     type: thesis
     title: "Enabling Service-Oriented Architecture at the Control Level for Industry 4.0: Design, Implementation, and Evaluation"
-    authors: "Molina, M."
+    authors: "Molina, Mateus"
     venue: "Thesis"
     year: 2023
     url: "https://doi.org/10.13140/RG.2.2.12794.81608"
+
+  - key: thesis_ptc_2019
+    type: thesis
+      title: "Estudo comparativo entre a manufatura aditiva e a termoformagem na fabricação de órteses para crianças com PTC"
+      authors: "Molina, Mateus"
+    venue: "Thesis"
+    year: 2019
+    url: "https://doi.org/10.13140/RG.2.2.29572.03206"
 
   # ── Projects ─────────────────────────────────────────────────────────────────
 

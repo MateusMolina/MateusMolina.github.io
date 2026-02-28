@@ -20,19 +20,6 @@ Every entry can use these fields:
 | `year`        | no       | Year of publication or access                    |
 | `pinned`      | no       | `true` to float to the top of its section        |
 
-Example:
-
-```yaml
-- key: attention_paper
-  type: paper
-  title: "Attention Is All You Need"
-  authors: "Vaswani, A. et al. (2017)"
-  venue: "NeurIPS 2017"
-  year: 2017
-  url: "https://arxiv.org/abs/1706.03762"
-  description: "The original Transformer architecture paper."
-```
-
 ## Building locally
 
 ```bash

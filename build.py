@@ -161,8 +161,7 @@ def render_page(meta: dict, timeline_html: str, filter_bar_html: str = "") -> st
 
           <footer class="site-footer">
             <div class="container">
-              <p>© {year} <a href="{owner_url}">{owner}</a> ·
-                 <a href="https://github.com/MateusMolina/MateusMolina.github.io">source</a></p>
+              <p>© {year} <a href="{owner_url}">{owner}</a></p>
             </div>
           </footer>
 
