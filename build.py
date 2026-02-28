@@ -120,7 +120,7 @@ def render_tl_block(year_label: str, entries: list[dict], extra_class: str = "")
 
 
 def render_page(meta: dict, timeline_html: str, filter_bar_html: str = "") -> str:
-    site_title = esc(meta.get("site_title", "Public links"))
+    site_title = esc(meta.get("site_title", "Publications"))
     site_description = esc(meta.get("site_description", ""))
     owner = esc(meta.get("owner", ""))
     owner_url = esc(meta.get("owner_url", "#"))
@@ -143,11 +143,8 @@ def render_page(meta: dict, timeline_html: str, filter_bar_html: str = "") -> st
         <body>
           <header class="site-header">
             <div class="container">
-              <h1 class="site-title"><a href="/">{site_title}</a></h1>
+              <h1 class="site-title"><a href="{owner_url}">{site_title}</a></h1>
               <p class="site-desc">{site_description}</p>
-              <nav class="header-nav">
-                <a href="{owner_url}">{owner}</a>
-              </nav>
               <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀</button>
             </div>
           </header>

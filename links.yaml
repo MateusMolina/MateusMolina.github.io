@@ -14,10 +14,10 @@
 #   pinned      : true to show at top of its category (optional, default false)
 
 meta:
-  site_title: "Mateus Molina — Public links"
+  site_title: "Mateus Molina — Publications"
   site_description: "A curated list of my public work, reading notes, and resources."
   owner: "Mateus Molina"
-  owner_url: "https://blog.mmolina.me"
+  owner_url: "https://mmolina.me"
 
 entries:
 
