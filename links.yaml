@@ -1,0 +1,52 @@
+# links.yaml — pub.mmolina.me
+#
+# BibLaTeX-inspired configuration for public links.
+#
+# Entry fields:
+#   key         : unique identifier (snake_case, no spaces)
+#   type        : website | book | paper | note | project | other
+#   title       : display title
+#   url         : full URL
+#   description : short description (optional)
+#   authors     : author list string, e.g. "Author, A. & Author, B. (2024)" (optional, mainly for papers)
+#   venue       : conference / journal / publisher (optional)
+#   year        : publication or access year (optional)
+#   pinned      : true to show at top of its category (optional, default false)
+
+meta:
+  site_title: "Mateus Molina — Public links"
+  site_description: "A curated list of my public work, reading notes, and resources."
+  owner: "Mateus Molina"
+  owner_url: "https://blog.mmolina.me"
+
+entries:
+
+  # ── Websites ────────────────────────────────────────────────────────────────
+
+  - key: blog
+    type: website
+    title: "Blog"
+    url: "https://blog.mmolina.me"
+    description: "Writing on technology, note-taking, philosophy, and everyday observations."
+    pinned: true
+
+  # ── Books / Notes ───────────────────────────────────────────────────────────
+
+  - key: mlsafety
+    type: book
+    title: "ML Safety — Reading Notes"
+    url: "https://mlsafety.mmolina.me"
+    description: "Personal notes while studying machine learning safety literature."
+    pinned: true
+
+  # ── Papers ──────────────────────────────────────────────────────────────────
+
+  # Example — replace or extend freely:
+  # - key: example_paper
+  #   type: paper
+  #   title: "Attention Is All You Need"
+  #   authors: "Vaswani, A. et al. (2017)"
+  #   venue: "NeurIPS 2017"
+  #   year: 2017
+  #   url: "https://arxiv.org/abs/1706.03762"
+  #   description: "The original Transformer architecture paper."
