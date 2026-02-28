@@ -113,24 +113,124 @@ h1, h2, h3 {
 
 /* ── Main content ─────────────────────────────────────────────────────────── */
 main.container {
-  padding-top: 3rem;
+  padding-top: 2.5rem;
   padding-bottom: 4rem;
 }
 
-/* ── Sections ─────────────────────────────────────────────────────────────── */
-.section {
-  margin-bottom: 3rem;
+/* ── Filter bar ───────────────────────────────────────────────────────────── */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.section h2 {
-  font-size: 0.75rem;
+.filter-tag {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.07em;
+  padding: 0.3em 0.85em;
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  background: transparent;
   color: var(--color-mute);
-  margin-bottom: 1.2rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+.filter-tag:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+.filter-tag.filter--active {
+  background: var(--bg-badge);
+  border-color: var(--link);
+  color: var(--link);
+  box-shadow: 0 0 0 2px rgba(123, 188, 241, 0.18);
+}
+[data-theme="light"] .filter-tag.filter--active {
+  box-shadow: 0 0 0 2px rgba(26, 111, 186, 0.15);
+}
+
+/* ── Timeline shell ───────────────────────────────────────────────────────── */
+.timeline {
+  position: relative;
+}
+
+/* The continuous vertical axis line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;                   /* horizontal center of the 60px gutter */
+  top: 1.4rem;
+  bottom: 1rem;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--border) 6%,
+    var(--border) 94%,
+    transparent 100%
+  );
+}
+
+/* ── Year block ───────────────────────────────────────────────────────────── */
+.tl-block {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  column-gap: 1.8rem;
+  align-items: start;
+  margin-bottom: 2.2rem;
+  position: relative;
+}
+
+/* Gutter: holds the year pill, sits on top of the axis line */
+.tl-gutter {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.7rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Year pill — background covers the line at this node */
+.tl-year {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-mute);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  padding: 0.22em 0.65em;
+  min-width: 2.4rem;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 0 0 3px var(--bg); /* punches through the axis line cleanly */
+}
+
+/* ── Pinned block ─────────────────────────────────────────────────────────── */
+.tl-block--pinned .tl-year {
+  color: var(--link);
+  border-color: var(--link);
+  background: var(--bg-badge);
+  box-shadow: 0 0 0 3px var(--bg), 0 0 8px rgba(123, 188, 241, 0.25);
+  font-size: 0.8rem;
+}
+[data-theme="light"] .tl-block--pinned .tl-year {
+  box-shadow: 0 0 0 3px var(--bg), 0 0 8px rgba(26, 111, 186, 0.2);
+}
+
+/* ── Divider ──────────────────────────────────────────────────────────────── */
+.tl-divider {
+  height: 1px;
+  margin: 0.5rem 0 2rem calc(60px + 1.8rem);
+  background: var(--border);
 }
 
 /* ── Entry cards ──────────────────────────────────────────────────────────── */
@@ -146,6 +246,24 @@ main.container {
 .entry:hover {
   border-color: var(--link);
   transform: translateY(-1px);
+}
+
+/* Pinned entry highlight */
+.entry--pinned {
+  border-color: rgba(123, 188, 241, 0.35);
+  background: linear-gradient(
+    135deg,
+    var(--bg-card) 70%,
+    rgba(123, 188, 241, 0.06) 100%
+  );
+}
+[data-theme="light"] .entry--pinned {
+  border-color: rgba(26, 111, 186, 0.3);
+  background: linear-gradient(
+    135deg,
+    var(--bg-card) 70%,
+    rgba(26, 111, 186, 0.05) 100%
+  );
 }
 
 .entry-header {
@@ -175,6 +293,17 @@ main.container {
   margin-top: 0.4rem;
   opacity: 0.85;
 }
+
+.entry-links {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+.entry-links a {
+  font-weight: 600;
+  font-size: 0.78rem;
+  opacity: 0.75;
+}
+.entry-links a:hover { opacity: 1; }
 
 /* ── Badges ───────────────────────────────────────────────────────────────── */
 .badge {
@@ -206,4 +335,8 @@ main.container {
   .site-title { font-size: 1.25rem; }
   .theme-toggle { top: 1rem; right: 1rem; }
   .entry { padding: 0.9rem 1rem; }
+  .timeline::before { left: 22px; }
+  .tl-block { grid-template-columns: 44px 1fr; column-gap: 1.2rem; }
+  .tl-year { font-size: 0.58rem; min-width: 1.8rem; padding: 0.2em 0.45em; }
+  .tl-divider { margin-left: calc(44px + 1.2rem); }
 }
