@@ -82,7 +82,7 @@ entries:
     title: "publishmd"
     url: "https://github.com/MateusMolina/publishmd"
     description: "Prepare markdown content for publication with a configurable processing pipeline."
-    year: 2026
+    year: 2025
     docs_url: "https://pub.mmolina.me/publishmd/"
 
   - key: obsidian_git_file_explorer
@@ -90,4 +90,4 @@ entries:
     title: "Obsidian Git File Explorer"
     url: "https://github.com/MateusMolina/obsidian-git-file-explorer"
     description: "Obsidian plugin that integrates the file explorer with Git, showing repository information next to vaults."
-    year: 2026
+    year: 2023

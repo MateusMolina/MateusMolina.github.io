@@ -51,25 +51,28 @@ def esc(s: str) -> str:
 
 
 def render_entry(entry: dict, show_badge: bool = True) -> str:
-    title       = esc(entry.get("title", "Untitled"))
-    url         = esc(entry.get("url", "#"))
+    title = esc(entry.get("title", "Untitled"))
+    url = esc(entry.get("url", "#"))
     description = esc(entry.get("description", ""))
-    authors     = esc(entry.get("authors", ""))
-    venue       = esc(entry.get("venue", ""))
-    docs_url    = esc(entry.get("docs_url", ""))
-    etype       = entry.get("type", "other")
-    badge       = TYPE_BADGES.get(etype, etype)
-    pinned_cls  = " entry--pinned" if entry.get("pinned") else ""
+    authors = esc(entry.get("authors", ""))
+    venue = esc(entry.get("venue", ""))
+    docs_url = esc(entry.get("docs_url", ""))
+    etype = entry.get("type", "other")
+    badge = TYPE_BADGES.get(etype, etype)
+    pinned_cls = " entry--pinned" if entry.get("pinned") else ""
 
     meta_parts = [p for p in [authors, venue] if p]
-    meta_html  = (
+    meta_html = (
         f'<p class="entry-meta">{" · ".join(meta_parts)}</p>' if meta_parts else ""
     )
-    desc_html  = f'<p class="entry-desc">{description}</p>' if description else ""
-    badge_html = f'<span class="badge badge-{badge}">{badge}</span>' if show_badge else ""
+    desc_html = f'<p class="entry-desc">{description}</p>' if description else ""
+    badge_html = (
+        f'<span class="badge badge-{badge}">{badge}</span>' if show_badge else ""
+    )
     links_html = (
         f'<p class="entry-links"><a href="{docs_url}" target="_blank" rel="noopener">docs ↗</a></p>'
-        if docs_url else ""
+        if docs_url
+        else ""
     )
 
     return textwrap.dedent(
@@ -102,7 +105,7 @@ def render_filter_bar(types: list[str]) -> str:
 
 def render_tl_block(year_label: str, entries: list[dict], extra_class: str = "") -> str:
     items = "\n".join(render_entry(e) for e in entries)
-    cls   = f'tl-block{" " + extra_class if extra_class else ""}'
+    cls = f'tl-block{" " + extra_class if extra_class else ""}'
     return textwrap.dedent(
         f"""\
         <div class="{cls}">
@@ -211,11 +214,11 @@ def render_page(meta: dict, timeline_html: str, filter_bar_html: str = "") -> st
 
 
 def build() -> None:
-    data    = yaml.safe_load(SRC.read_text())
-    meta    = data.get("meta", {})
+    data = yaml.safe_load(SRC.read_text())
+    meta = data.get("meta", {})
     entries = data.get("entries", [])
 
-    pinned     = [e for e in entries if e.get("pinned")]
+    pinned = [e for e in entries if e.get("pinned")]
     not_pinned = [e for e in entries if not e.get("pinned")]
 
     # Sort non-pinned by year descending; entries without a year go last
@@ -223,6 +226,7 @@ def build() -> None:
 
     # Group non-pinned by year
     from itertools import groupby
+
     year_blocks: list[tuple[str, list]] = []
     for yr, grp in groupby(not_pinned, key=lambda e: e.get("year")):
         label = str(yr) if yr else "—"
