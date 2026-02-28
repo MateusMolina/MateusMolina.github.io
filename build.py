@@ -2,7 +2,7 @@
 """
 build.py — static site generator for pub.mmolina.me
 
-Reads links.yaml and writes index.html.
+Reads links.yaml, renders template.html (Jinja2) → index.html.
 
 Usage:
     python build.py              # writes index.html
@@ -10,21 +10,27 @@ Usage:
 """
 
 import sys
-import textwrap
-import html
 from pathlib import Path
 from datetime import datetime, timezone
+from itertools import groupby
 
 try:
     import yaml
 except ImportError:
-    print("Error: PyYAML is required.  Install it with:  pip install pyyaml")
+    print("Error: PyYAML is required.  pip install pyyaml")
+    sys.exit(1)
+
+try:
+    from jinja2 import Environment, FileSystemLoader, select_autoescape
+except ImportError:
+    print("Error: Jinja2 is required.  pip install jinja2")
     sys.exit(1)
 
 # ── Constants ────────────────────────────────────────────────────────────────
 
 ROOT = Path(__file__).parent
 SRC = ROOT / "links.yaml"
+TMPL = ROOT / "template.html"
 OUT = ROOT / "index.html"
 
 TYPE_ORDER = ["website", "book", "paper", "thesis", "note", "project", "other"]
@@ -42,170 +48,6 @@ TYPE_BADGES = {
 _YEAR_NONE = 0  # sentinel: entries without a year sort to the bottom
 
 
-# ── Helpers ──────────────────────────────────────────────────────────────────
-
-
-def esc(s: str) -> str:
-    """HTML-escape a string."""
-    return html.escape(str(s)) if s else ""
-
-
-def render_entry(entry: dict, show_badge: bool = True) -> str:
-    title = esc(entry.get("title", "Untitled"))
-    url = esc(entry.get("url", "#"))
-    description = esc(entry.get("description", ""))
-    authors = esc(entry.get("authors", ""))
-    venue = esc(entry.get("venue", ""))
-    docs_url = esc(entry.get("docs_url", ""))
-    etype = entry.get("type", "other")
-    badge = TYPE_BADGES.get(etype, etype)
-    pinned_cls = " entry--pinned" if entry.get("pinned") else ""
-
-    meta_parts = [p for p in [authors, venue] if p]
-    meta_html = (
-        f'<p class="entry-meta">{" · ".join(meta_parts)}</p>' if meta_parts else ""
-    )
-    desc_html = f'<p class="entry-desc">{description}</p>' if description else ""
-    badge_html = (
-        f'<span class="badge badge-{badge}">{badge}</span>' if show_badge else ""
-    )
-    links_html = (
-        f'<p class="entry-links"><a href="{docs_url}" target="_blank" rel="noopener">docs ↗</a></p>'
-        if docs_url
-        else ""
-    )
-
-    return textwrap.dedent(
-        f"""\
-        <article class="entry{pinned_cls}" data-type="{etype}">
-          <div class="entry-header">
-            <a class="entry-title" href="{url}" target="_blank" rel="noopener">{title}</a>
-            {badge_html}
-          </div>
-          {meta_html}
-          {desc_html}
-          {links_html}
-        </article>"""
-    )
-
-
-def render_filter_bar(types: list[str]) -> str:
-    tags = [f'<button class="filter-tag filter--active" data-filter="all">all</button>']
-    for t in types:
-        badge = TYPE_BADGES.get(t, t)
-        tags.append(f'<button class="filter-tag" data-filter="{t}">{badge}</button>')
-    inner = "\n    ".join(tags)
-    return textwrap.dedent(
-        f"""\
-        <div class="filter-bar" id="filterBar">
-          {inner}
-        </div>"""
-    )
-
-
-def render_tl_block(year_label: str, entries: list[dict], extra_class: str = "") -> str:
-    items = "\n".join(render_entry(e) for e in entries)
-    cls = f'tl-block{" " + extra_class if extra_class else ""}'
-    return textwrap.dedent(
-        f"""\
-        <div class="{cls}">
-          <div class="tl-gutter">
-            <span class="tl-year">{year_label}</span>
-          </div>
-          <div class="tl-entries">
-            {items}
-          </div>
-        </div>"""
-    )
-
-
-def render_page(meta: dict, timeline_html: str, filter_bar_html: str = "") -> str:
-    site_title = esc(meta.get("site_title", "Publications"))
-    site_description = esc(meta.get("site_description", ""))
-    owner = esc(meta.get("owner", ""))
-    owner_url = esc(meta.get("owner_url", "#"))
-    year = datetime.now(timezone.utc).year
-
-    return textwrap.dedent(
-        f"""\
-        <!DOCTYPE html>
-        <html lang="en" data-theme="dark">
-        <head>
-          <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>{site_title}</title>
-          <meta name="description" content="{site_description}" />
-          <link rel="stylesheet" href="styles.css" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-        </head>
-        <body>
-          <header class="site-header">
-            <div class="container">
-              <h1 class="site-title"><a href="{owner_url}">{site_title}</a></h1>
-              <p class="site-desc">{site_description}</p>
-              <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀</button>
-            </div>
-          </header>
-
-          <main class="container">
-            {filter_bar_html}
-            <div class="timeline">
-              {timeline_html}
-            </div>
-          </main>
-
-          <footer class="site-footer">
-            <div class="container">
-              <p>© {year} <a href="{owner_url}">{owner}</a></p>
-            </div>
-          </footer>
-
-          <script>
-            const toggle = document.getElementById('themeToggle');
-            const html   = document.documentElement;
-            const stored = localStorage.getItem('theme');
-            if (stored) html.setAttribute('data-theme', stored);
-            toggle.addEventListener('click', () => {{
-              const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-              html.setAttribute('data-theme', next);
-              localStorage.setItem('theme', next);
-              toggle.textContent = next === 'dark' ? '☀' : '☾';
-            }});
-            // Sync button label on load
-            toggle.textContent = (html.getAttribute('data-theme') === 'dark') ? '☀' : '☾';
-
-            // ── Filter bar ──────────────────────────────────────────────
-            (function() {{
-              const bar = document.getElementById('filterBar');
-              if (!bar) return;
-              bar.addEventListener('click', function(e) {{
-                const btn = e.target.closest('[data-filter]');
-                if (!btn) return;
-                const f = btn.dataset.filter;
-                bar.querySelectorAll('[data-filter]').forEach(function(b) {{
-                  b.classList.toggle('filter--active', b === btn);
-                }});
-                document.querySelectorAll('.entry').forEach(function(el) {{
-                  el.hidden = f !== 'all' && el.dataset.type !== f;
-                }});
-                document.querySelectorAll('.tl-block').forEach(function(block) {{
-                  block.hidden = block.querySelectorAll('.entry:not([hidden])').length === 0;
-                }});
-                const divider = document.querySelector('.tl-divider');
-                if (divider) {{
-                  const pinned = document.querySelector('.tl-block--pinned');
-                  divider.hidden = pinned ? pinned.hidden : false;
-                }}
-              }});
-            }})();
-          </script>
-        </body>
-        </html>"""
-    )
-
-
 # ── Build ────────────────────────────────────────────────────────────────────
 
 
@@ -220,26 +62,11 @@ def build() -> None:
     # Sort non-pinned by year descending; entries without a year go last
     not_pinned.sort(key=lambda e: -(e.get("year") or _YEAR_NONE))
 
-    # Group non-pinned by year
-    from itertools import groupby
-
+    # Group non-pinned entries by year
     year_blocks: list[tuple[str, list]] = []
     for yr, grp in groupby(not_pinned, key=lambda e: e.get("year")):
         label = str(yr) if yr else "—"
         year_blocks.append((label, list(grp)))
-
-    parts: list[str] = []
-
-    # Pinned block at top
-    if pinned:
-        parts.append(render_tl_block("★", pinned, extra_class="tl-block--pinned"))
-        if year_blocks:
-            parts.append('<div class="tl-divider"></div>')
-
-    for label, block_entries in year_blocks:
-        parts.append(render_tl_block(label, block_entries))
-
-    timeline_html = "\n\n".join(parts)
 
     # Collect unique types in display order for the filter bar
     seen: list[str] = []
@@ -247,10 +74,24 @@ def build() -> None:
         t = e.get("type", "other")
         if t not in seen:
             seen.append(t)
-    seen.sort(key=lambda t: (TYPE_ORDER.index(t) if t in TYPE_ORDER else 99))
-    filter_bar_html = render_filter_bar(seen)
+    seen.sort(key=lambda t: TYPE_ORDER.index(t) if t in TYPE_ORDER else 99)
 
-    page = render_page(meta, timeline_html, filter_bar_html)
+    env = Environment(
+        loader=FileSystemLoader(str(ROOT)),
+        autoescape=select_autoescape(["html"]),
+        trim_blocks=True,
+        lstrip_blocks=True,
+    )
+    template = env.get_template(TMPL.name)
+
+    page = template.render(
+        meta=meta,
+        pinned=pinned,
+        year_blocks=year_blocks,
+        filter_types=seen,
+        type_badges=TYPE_BADGES,
+        current_year=datetime.now(timezone.utc).year,
+    )
     OUT.write_text(page, encoding="utf-8")
     print(f"Built {OUT}  ({len(entries)} entries)")
 

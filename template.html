@@ -1,0 +1,144 @@
+{#- template.html — Jinja2 template for pub.mmolina.me
+    Rendered by build.py → index.html
+
+    Context variables:
+      meta         : dict  (site_title, site_description, owner, owner_url)
+      pinned       : list of entry dicts
+      year_blocks  : list of (label: str, entries: list[dict])
+      filter_types : list of type strings in display order
+      type_badges  : dict mapping type → badge label
+      current_year : int
+-#}
+{#- ── Entry macro ──────────────────────────────────────────────────────── -#}
+{%- macro render_entry(entry) %}
+{%- set etype     = entry.type    | default('other') -%}
+{%- set badge     = type_badges[etype] | default(etype) -%}
+{%- set pinned_cls = ' entry--pinned' if entry.pinned else '' -%}
+<article class="entry{{ pinned_cls }}" data-type="{{ etype }}">
+  <div class="entry-header">
+    <a class="entry-title" href="{{ entry.url | default('#') }}" target="_blank" rel="noopener">{{ entry.title | default('Untitled') }}</a>
+    <span class="badge badge-{{ badge }}">{{ badge }}</span>
+  </div>
+  {%- if entry.authors or entry.venue %}
+  <p class="entry-meta">
+    {%- set parts = [] -%}
+    {%- if entry.authors %}{% set _ = parts.append(entry.authors) %}{% endif -%}
+    {%- if entry.venue   %}{% set _ = parts.append(entry.venue)   %}{% endif -%}
+    {{ parts | join(' · ') }}
+  </p>
+  {%- endif %}
+  {%- if entry.description %}
+  <p class="entry-desc">{{ entry.description }}</p>
+  {%- endif %}
+  {%- if entry.docs_url %}
+  <p class="entry-links"><a href="{{ entry.docs_url }}" target="_blank" rel="noopener">docs ↗</a></p>
+  {%- endif %}
+</article>
+{%- endmacro %}
+{#- ── Page ────────────────────────────────────────────────────────────── -#}
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ meta.site_title }}</title>
+  <meta name="description" content="{{ meta.site_description }}" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title"><a href="{{ meta.owner_url }}">{{ meta.site_title }}</a></h1>
+      <p class="site-desc">{{ meta.site_description }}</p>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀</button>
+    </div>
+  </header>
+
+  <main class="container">
+    {% if filter_types %}
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-tag filter--active" data-filter="all">all</button>
+      {% for t in filter_types %}
+      <button class="filter-tag" data-filter="{{ t }}">{{ type_badges[t] | default(t) }}</button>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="timeline">
+      {% if pinned %}
+      <div class="tl-block tl-block--pinned">
+        <div class="tl-gutter">
+          <span class="tl-year">★</span>
+        </div>
+        <div class="tl-entries">
+          {% for entry in pinned %}{{ render_entry(entry) }}{% endfor %}
+        </div>
+      </div>
+      {% if year_blocks %}<div class="tl-divider"></div>{% endif %}
+      {% endif %}
+
+      {% for label, block_entries in year_blocks %}
+      <div class="tl-block">
+        <div class="tl-gutter">
+          <span class="tl-year">{{ label }}</span>
+        </div>
+        <div class="tl-entries">
+          {% for entry in block_entries %}{{ render_entry(entry) }}{% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© {{ current_year }} <a href="{{ meta.owner_url }}">{{ meta.owner }}</a></p>
+    </div>
+  </footer>
+
+  {% raw %}
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const html   = document.documentElement;
+    const stored = localStorage.getItem('theme');
+    if (stored) html.setAttribute('data-theme', stored);
+    toggle.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      toggle.textContent = next === 'dark' ? '☀' : '☾';
+    });
+    // Sync button label on load
+    toggle.textContent = (html.getAttribute('data-theme') === 'dark') ? '☀' : '☾';
+
+    // ── Filter bar ──────────────────────────────────────────────────────────
+    (function() {
+      const bar = document.getElementById('filterBar');
+      if (!bar) return;
+      bar.addEventListener('click', function(e) {
+        const btn = e.target.closest('[data-filter]');
+        if (!btn) return;
+        const f = btn.dataset.filter;
+        bar.querySelectorAll('[data-filter]').forEach(function(b) {
+          b.classList.toggle('filter--active', b === btn);
+        });
+        document.querySelectorAll('.entry').forEach(function(el) {
+          el.hidden = f !== 'all' && el.dataset.type !== f;
+        });
+        document.querySelectorAll('.tl-block').forEach(function(block) {
+          block.hidden = block.querySelectorAll('.entry:not([hidden])').length === 0;
+        });
+        const divider = document.querySelector('.tl-divider');
+        if (divider) {
+          const pinned = document.querySelector('.tl-block--pinned');
+          divider.hidden = pinned ? pinned.hidden : false;
+        }
+      });
+    })();
+  </script>
+  {% endraw %}
+</body>
+</html>
