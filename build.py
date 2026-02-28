@@ -24,28 +24,31 @@ except ImportError:
 # ── Constants ────────────────────────────────────────────────────────────────
 
 ROOT = Path(__file__).parent
-SRC  = ROOT / "links.yaml"
-OUT  = ROOT / "index.html"
+SRC = ROOT / "links.yaml"
+OUT = ROOT / "index.html"
 
-TYPE_ORDER = ["website", "book", "paper", "note", "project", "other"]
+TYPE_ORDER = ["website", "book", "paper", "thesis", "note", "project", "other"]
 TYPE_LABELS = {
     "website": "Websites",
-    "book":    "Books & Notes",
-    "paper":   "Papers",
-    "note":    "Notes",
+    "book": "Books & Notes",
+    "paper": "Papers",
+    "thesis": "Theses",
+    "note": "Notes",
     "project": "Projects",
-    "other":   "Other",
+    "other": "Other",
 }
 TYPE_BADGES = {
     "website": "web",
-    "book":    "book",
-    "paper":   "paper",
-    "note":    "note",
+    "book": "book",
+    "paper": "paper",
+    "thesis": "thesis",
+    "note": "note",
     "project": "project",
-    "other":   "other",
+    "other": "other",
 }
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
+
 
 def esc(s: str) -> str:
     """HTML-escape a string."""
@@ -53,26 +56,23 @@ def esc(s: str) -> str:
 
 
 def render_entry(entry: dict) -> str:
-    title       = esc(entry.get("title", "Untitled"))
-    url         = esc(entry.get("url", "#"))
+    title = esc(entry.get("title", "Untitled"))
+    url = esc(entry.get("url", "#"))
     description = esc(entry.get("description", ""))
-    authors     = esc(entry.get("authors", ""))
-    venue       = esc(entry.get("venue", ""))
-    year        = esc(str(entry.get("year", "")))
-    etype       = entry.get("type", "other")
-    badge       = TYPE_BADGES.get(etype, etype)
+    authors = esc(entry.get("authors", ""))
+    venue = esc(entry.get("venue", ""))
+    year = esc(str(entry.get("year", "")))
+    etype = entry.get("type", "other")
+    badge = TYPE_BADGES.get(etype, etype)
 
     meta_parts = [p for p in [authors, venue, year] if p]
-    meta_html  = (
-        f'<p class="entry-meta">{" · ".join(meta_parts)}</p>'
-        if meta_parts else ""
+    meta_html = (
+        f'<p class="entry-meta">{" · ".join(meta_parts)}</p>' if meta_parts else ""
     )
-    desc_html = (
-        f'<p class="entry-desc">{description}</p>'
-        if description else ""
-    )
+    desc_html = f'<p class="entry-desc">{description}</p>' if description else ""
 
-    return textwrap.dedent(f"""\
+    return textwrap.dedent(
+        f"""\
         <article class="entry">
           <div class="entry-header">
             <a class="entry-title" href="{url}" target="_blank" rel="noopener">{title}</a>
@@ -80,29 +80,35 @@ def render_entry(entry: dict) -> str:
           </div>
           {meta_html}
           {desc_html}
-        </article>""")
+        </article>"""
+    )
 
 
 def render_section(type_key: str, entries: list[dict]) -> str:
-    label   = TYPE_LABELS.get(type_key, type_key.title())
+    label = TYPE_LABELS.get(type_key, type_key.title())
     # Pinned entries first, then alphabetical by title
-    sorted_entries = sorted(entries, key=lambda e: (not e.get("pinned", False), e.get("title", "").lower()))
+    sorted_entries = sorted(
+        entries, key=lambda e: (not e.get("pinned", False), e.get("title", "").lower())
+    )
     items = "\n".join(render_entry(e) for e in sorted_entries)
-    return textwrap.dedent(f"""\
+    return textwrap.dedent(
+        f"""\
         <section class="section">
           <h2>{label}</h2>
           {items}
-        </section>""")
+        </section>"""
+    )
 
 
 def render_page(meta: dict, sections_html: str) -> str:
-    site_title       = esc(meta.get("site_title", "Public links"))
+    site_title = esc(meta.get("site_title", "Public links"))
     site_description = esc(meta.get("site_description", ""))
-    owner            = esc(meta.get("owner", ""))
-    owner_url        = esc(meta.get("owner_url", "#"))
-    year             = datetime.now(timezone.utc).year
+    owner = esc(meta.get("owner", ""))
+    owner_url = esc(meta.get("owner_url", "#"))
+    year = datetime.now(timezone.utc).year
 
-    return textwrap.dedent(f"""\
+    return textwrap.dedent(
+        f"""\
         <!DOCTYPE html>
         <html lang="en" data-theme="dark">
         <head>
@@ -153,14 +159,16 @@ def render_page(meta: dict, sections_html: str) -> str:
             toggle.textContent = (html.getAttribute('data-theme') === 'dark') ? '☀' : '☾';
           </script>
         </body>
-        </html>""")
+        </html>"""
+    )
 
 
 # ── Build ────────────────────────────────────────────────────────────────────
 
+
 def build() -> None:
     data = yaml.safe_load(SRC.read_text())
-    meta    = data.get("meta", {})
+    meta = data.get("meta", {})
     entries = data.get("entries", [])
 
     # Group by type
@@ -170,9 +178,7 @@ def build() -> None:
         grouped.setdefault(t, []).append(entry)
 
     sections_html = "\n\n".join(
-        render_section(t, grouped[t])
-        for t in TYPE_ORDER
-        if t in grouped
+        render_section(t, grouped[t]) for t in TYPE_ORDER if t in grouped
     )
     # Catch any types not in TYPE_ORDER
     extra = [t for t in grouped if t not in TYPE_ORDER]
@@ -185,6 +191,7 @@ def build() -> None:
 
 
 # ── Watch mode ───────────────────────────────────────────────────────────────
+
 
 def watch() -> None:
     try:
