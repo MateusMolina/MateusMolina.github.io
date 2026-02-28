@@ -77,8 +77,8 @@ entries:
 
   - key: thesis_ptc_2019
     type: thesis
-      title: "Estudo comparativo entre a manufatura aditiva e a termoformagem na fabricação de órteses para crianças com PTC"
-      authors: "Molina, Mateus"
+    title: "Estudo comparativo entre a manufatura aditiva e a termoformagem na fabricação de órteses para crianças com PTC"
+    authors: "Molina, Mateus"
     venue: "Thesis"
     year: 2019
     url: "https://doi.org/10.13140/RG.2.2.29572.03206"
