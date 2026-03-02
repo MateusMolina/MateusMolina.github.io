@@ -33,7 +33,7 @@ SRC = ROOT / "links.yaml"
 TMPL = ROOT / "template.html"
 OUT = ROOT / "index.html"
 
-TYPE_ORDER = ["website", "book", "paper", "thesis", "note", "project", "other"]
+TYPE_ORDER = ["website", "book", "paper", "preprint", "thesis", "note", "project", "other"]
 
 TYPE_BADGES = {
     "website": "web",
@@ -42,6 +42,7 @@ TYPE_BADGES = {
     "thesis": "thesis",
     "note": "note",
     "project": "project",
+    "preprint": "preprint",
     "other": "other",
 }
 

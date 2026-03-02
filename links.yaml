@@ -82,6 +82,15 @@ entries:
     venue: "Thesis"
     year: 2019
     url: "https://doi.org/10.13140/RG.2.2.29572.03206"
+  
+  # ── Preprints ────────────────────────────────────────────────────────────────
+  - key: molina_2026_18835294
+    type: preprint
+    title: "CIEEL: A Continuous Integration Framework for Exams and Exercise Lists"
+    authors: "Molina, Mateus"
+    year: 2026
+    url: "https://doi.org/10.5281/zenodo.18835294"
+    docs_url: "https://github.com/mateusmolina/cieel"
 
   # ── Projects ─────────────────────────────────────────────────────────────────
 
